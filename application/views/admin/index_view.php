@@ -18,7 +18,7 @@
 Pantallas
 <ul>
 <li>
-<a href="<?php echo base_url()?>principal/getAdminP"> <img src="<?php echo base_url()?>images/ciculo.png" /> Inicio</a>
+<a href="<?php echo base_url()?>admin/principal/getAdminP"> <img src="<?php echo base_url()?>images/ciculo.png" /> Inicio</a>
 </li>
 <li>
 <a href="<?php echo base_url()?>pantallas_admin.html?venta"> <img src="<?php echo base_url()?>images/ciculo.png" /> Venta</a>
