@@ -44,6 +44,16 @@ class Defaultdata_model extends CI_Model {
         return true;
     }
 	
+    function getUsers(){
+        $query = $this -> db -> get($this -> tablas['usuario']);
+        return $query -> result();
+
+    }
+
+    function getAnnounces(){
+        $query = $this -> db -> get($this -> tablas['publicaciones']);
+        return $query -> result();
+    }
 	
 
 }

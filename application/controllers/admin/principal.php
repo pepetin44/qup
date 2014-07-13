@@ -39,6 +39,9 @@ class Principal extends CI_Controller {
         $visitas = $this->defaultdata_model->getVisitas();
         $data['visitas'] = $visitas;
         $data['mapaSegundo'] = 'mapa_view';
+        $data['usuariosT'] = count($this->defaultdata_model->getUsers());
+        $data['anunciosT'] = count($this->defaultdata_model->getAnnounces());
+        
         
         // mapa
         
@@ -66,7 +69,7 @@ class Principal extends CI_Controller {
         $this->googlemaps->add_marker($marker);
         $data['map'] = $this->googlemaps->create_map();
         //var_dump($data['map']);
-        var_dump($this->session->userdata('nivel'),$this->session->userdata('tipoUsuario'),is_logged());
+        //var_dump($this->session->userdata('nivel'),$this->session->userdata('tipoUsuario'),is_logged());
         $this->load->view('admin/index_view', $data);
     }
 

@@ -17,4 +17,26 @@
  $config['tablas']['rol'] = 'rol';
  $config['tablas']['roltienepermiso'] = 'roltienepermiso';
  $config['tablas']['permiso'] = 'permiso';
+ $config['tablas']['publicaciones'] = 'publicaciones';
+ $config['tablas']['banner'] = 'banner';
+ $config['tablas']['carrito'] = 'carrito';
+ $config['tablas']['catalogoproductos'] = 'catalogoproductos';
+ $config['tablas']['compra'] = 'compra';
+ $config['tablas']['compradetalle'] = 'compradetalle';
+ $config['tablas']['contadormensajes'] = 'contadormensajes';
+ $config['tablas']['contenido'] = 'contenido';
+ $config['tablas']['cupon'] = 'cupon';
+ $config['tablas']['cuponadquirido'] = 'cuponadquirido';
+ $config['tablas']['cupondetalle'] = 'cupondetalle';
+ $config['tablas']['detallepaquete'] = 'detallepaquete';
+ $config['tablas']['favoritos'] = 'favoritos';
+ $config['tablas']['fotospublicacion'] = 'fotospublicacion';
+ $config['tablas']['fotostienda'] = 'fotostienda';
+ $config['tablas']['mensajes'] = 'mensajes';
+ $config['tablas']['paquete'] = 'paquete';
+ $config['tablas']['raza'] = 'raza';
+ $config['tablas']['serviciocontratado'] = 'serviciocontratado';
+ $config['tablas']['videos'] = 'videos';
+
+
 ?>

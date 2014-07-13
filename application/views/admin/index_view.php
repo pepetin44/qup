@@ -30,7 +30,7 @@ Pantallas
 <a href="<?php echo base_url()?>pantallas_admin.html?directorio"> <img src="<?php echo base_url()?>images/ciculo.png" /> Directorio</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Prefil de usuario</a>
+<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Perfil de usuario</a>
 </li>
 <li>
 <a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Adopción</a>
@@ -111,14 +111,14 @@ BIENVENIDO
 <div style="margin-left:12px; margin-right:12px;" class="contenedor_indicador">
 <img src="<?php echo base_url()?>images/usuarios.png"/>
 <div class="contadores">
-100000
+	<?php echo $usuariosT;   ?>
 </div>
 </div>
 
 <div class="contenedor_indicador">
 <img src="<?php echo base_url()?>images/publicaciones.png"/>
 <div class="contadores">
-100000
+	<?php echo $anunciosT; ?>
 </div>
 </div>
 
