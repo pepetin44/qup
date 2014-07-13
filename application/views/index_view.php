@@ -294,9 +294,10 @@ Se ha enviado contraseña al correo electronico indicado
 <p><input type="text" name="cp"/> </p>
 
 <p><input type="text" name="municipio"/> </p>
-<p><select name="estado">
+<p><select name="estado" id="estado">
      <option> --- </option>
   <?php 
+  var_dump($estados);
     if($estados != null):
       foreach ($estados as $edo):
   ?>

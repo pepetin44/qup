@@ -288,7 +288,7 @@ Bienvenido</td></tr>
 				if ($this->session->userdata('tipoUsuario')==3) {
 					redirect('asociacion');
 				}
-				if ($this->session->userdata('tipoUsuario')==2) {
+				if ($this->session->userdata('tipoUsuario')==0) {
 					redirect('admin');
 				}
 				

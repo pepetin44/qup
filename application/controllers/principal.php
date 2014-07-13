@@ -27,8 +27,7 @@ class Principal extends CI_Controller {
 		$data['SYS_metaTitle'] 			= '';
 		$data['SYS_metaKeyWords'] 		= '';
 		$data['SYS_metaDescription'] 	= '';  
-		$data['estados'] 	= $this->defaultdata_model->getEstados();
-		$data['paises'] 	= $this->defaultdata_model->getPaises();
+		
 		$visitas = $this->defaultdata_model->getVisitas();
 		$contador = $visitas + 1;		
 		$this->defaultdata_model->registroVisita($data = array('numeroVisitas' => $contador));
@@ -59,17 +58,18 @@ class Principal extends CI_Controller {
 		//$marker['ondragend'] = 'alert(\'You just dropped me at: \' + event.latLng.lat() + \', \' + event.latLng.lng());';
 		$this->googlemaps->add_marker($marker);
 		$data['map'] = $this->googlemaps->create_map();
-		//var_dump($data['map']);
+		
 
 		
 		
 
 		// mapa
-
-		
+		$data['estados'] 	= $this->defaultdata_model->getEstados();
+		$data['paises'] 	= $this->defaultdata_model->getPaises();
 		
         
 		$this->load->view('index_view', $data);
+
 	}
 
 	
