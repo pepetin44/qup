@@ -12,6 +12,7 @@
  $config['tablas']['pais'] = 'pais';  
  $config['tablas']['giroempresa'] = 'giroempresa';
  $config['tablas']['zonageograficaestado'] = 'zonageograficaestado';
+ $config['tablas']['zonageografica'] = 'zonageografica';
  $config['tablas']['ubicacionusuario'] = 'ubicacionusuario';
  $config['tablas']['visita'] = 'visita';
  $config['tablas']['rol'] = 'rol';

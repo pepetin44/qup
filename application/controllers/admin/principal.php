@@ -18,6 +18,7 @@ class Principal extends CI_Controller {
         $this->load->helper(array('form', 'url'));
         $this->load->model('defaultdata_model');
         $this->load->library('googlemaps');
+        $this->load->model('admin_model');
 
         //is_authorized($nivelesReq, $idPermiso, $nivelUsuario, $rolUsuario)
         if (!is_authorized(array(0), 4, $this->session->userdata('nivel'), $this->session->userdata('rol'))) {
@@ -75,8 +76,16 @@ class Principal extends CI_Controller {
 
 
     function getAdminP(){
-         $this->load->view('admin/adminIndex_view');
+         $data['zonageografica'] = $this->admin_model->getZonasG();
+         $this->load->view('admin/adminIndex_view', $data);
+
     }
+
+    
+        
+
+    
+
 
 
     

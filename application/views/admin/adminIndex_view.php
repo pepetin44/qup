@@ -163,9 +163,14 @@ PANTALLAS-INICIO
 <div class="contenedor_buscador">
 <div class="fondo_select">
 <select   class="estilo_select" id="genero">
-<option > Zona </option>
-<option style="background-color: #999;"> Centro </option>
-<option style="background-color: #999;"> Norte </option>
+
+ <?php if ($zonageografica != Null):
+ 	foreach ($zonageografica as $zona) {?>
+<option style="background-color: #999;" value = "<?php echo $zona -> zonaID; ?>"> 
+<?php echo $zona -> zona;?>
+ </option>
+ <?php }endif;?>
+
 
 </select>
 </div>
