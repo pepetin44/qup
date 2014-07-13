@@ -1,0 +1,833 @@
+.contenedor_central{
+	float: left;
+	width:795px;
+}
+.titulo_seccion{
+	font-size:60px;
+	margin: 0 auto; 
+	width: 990px;
+	max-width:990px;
+	font-family:"titulos";
+	color:#7EA715;
+	margin-top:5px;
+	height:70px;
+
+	}
+.buscador{
+	width:990px;
+	margin: 0px auto;
+	}
+.contenedor_buscador{
+	padding:5px;
+	width:100%;
+	margin:0px auto;
+	height:32px;
+	background-color:#762EA4;
+	margin-bottom:15px;
+	text-align:center;
+	}
+.fondo_select{
+	height:28px;
+	width:160px;
+	background-image:url(../images/select.png);
+	float:left;
+	margin-left:25px;
+	}
+	
+.estilo_select{
+	background: transparent;
+	-webkit-appearance: none;
+	height:28px;
+	width:160px;
+	border:none;
+	border-radius: 10px;
+    font-family:"select";
+	font-size:20px;
+	color:#FFFFFF;
+	padding-left:5px;
+	margin-top:-6px;
+	outline: none;
+	}
+
+
+.primer_indicio {
+	
+	font-size:19px;
+	color:#FFFFFF;}
+.contenedor_anuncio{
+	width:180px;
+	height:232px;
+	background: #06F;
+	border:2px solid #DED9D5;
+	float:left;
+	margin-bottom:17px;}
+.titulo_anuncio{
+	padding:5px;
+	width:170px;
+	height:18px;
+	margin-top:0px;
+	background-color:#FF7C00;
+	text-align:center;
+	color:#FFF;
+	font-size:15px;
+	}
+.descripcion_anuncio{
+	margin-top:0px;
+	width:174px;
+	padding:3px;
+	height:82px;
+	background-color:#FFF;
+	border-bottom:2px solid #57B6B4;
+	}
+.contenedor_foto_anuncio{
+	width:170px;
+	padding:5px;
+	height:76px;
+	background-color:#E8F4F4;
+	text-align:center;
+	margin-top:0px;
+	}
+
+.ver_detalle_anuncio li{
+	width:170px;
+	padding:5px;
+	height:18px;
+	background-color:#57B6B4;
+	text-align:center;
+	color:#FFF;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	}
+	
+.ver_detalle_anuncio li:hover{
+	width:170px;
+	padding:5px;
+	height:18px;
+	background-color:#FFF;
+	text-align:center;
+	color:#57B6B4;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	cursor:pointer;
+	}
+	
+.ver_detalle_anuncio a{
+	color:#FFF;
+	} 
+.margen_derecho_20{
+	height:232px;
+	width:19.5px;
+	float:left;
+	}
+.contenedor_buscar{
+	background-image:url(../images/buscar.png);
+	height:28px;
+	width:160px;
+	float:left;
+	margin-left:25px;
+	vertical-align:middle;
+	}
+.buscar{
+	background: transparent;
+	outline: none;
+	border:none;
+	font-family:"select";
+	font-size:20px;
+	color:#FFFFFF;
+	margin-top:-5px;
+	margin-left:10px;
+	float:left;
+	}
+.slideshow_tres{
+	width:638px;
+	height:108;
+	margin: 0px auto;
+	margin-top:15px;
+	margin-bottom:15px;
+	}
+.contenedor_anuncio_detalle{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 50;
+   width: 100%;
+   height: 1600px;
+   background-image:url(../images/fondotabla.png);}
+   
+.leer_anuncio{
+	width:657px;
+	min-height:660px;
+	border: 5px solid #57B6B4;
+	background-color:#FFF;
+	margin:0 auto;
+	margin-top:5px;
+	padding:10px;
+	 }
+.contenedor_galeria{
+	width:394px;
+	height:243px;
+	float:left;
+	}
+	
+.datos_general{
+	width:252px;
+	height:243px;
+	float:left;
+	margin-left:10px;
+	font-size:13px;
+	}
+.contenedor_del_detalle{
+	position:relative;
+	width:655px;
+	height:376px;
+	margin-top:233px;
+	}
+.contenedor_cerrar_anuncio{
+	width:667px;
+	height:66px;
+	margin:0px auto;
+	text-align:right;
+	}
+#nav_anuncio { 
+float:right; 
+height:205px; 
+overflow: scroll; 
+overflow-x: hidden;
+width:95px;
+}
+#nav_anuncio li { 
+width: 50px;
+margin: 8px; 
+list-style: none 
+}
+#nav_anuncio a { 
+width: 61px; 
+padding: 3px; 
+display: block; 
+border: 1px solid #ccc; 
+}
+#nav_anuncio li.activeSlide a { 
+background: #57B6B4; 
+}
+#nav_anuncio a:focus { 
+outline: none; 
+}
+#nav_anuncio img { 
+border: none;
+ display: block;
+  }
+ 
+ 
+ #nav_anuncio_previo { 
+float:right; 
+height:205px; 
+overflow: scroll; 
+overflow-x: hidden;
+width:95px;
+background-color:#003300,
+}
+#nav_anuncio_previo li { 
+width: 50px;
+margin: 8px; 
+list-style: none 
+}
+#nav_anuncio_previo a { 
+width: 61px; 
+padding: 3px; 
+display: block; 
+border: 1px solid #ccc; 
+}
+#nav_anuncio_previo li.activeSlide a { 
+background: #57B6B4; 
+}
+#nav_anuncio_previo a:focus { 
+outline: none; 
+}
+#nav_anuncio_previo img { 
+border: none;
+ display: block;
+  }
+ 
+.titulo_anuncio_publicado{
+	width:245px;
+	max-height:45px;
+	font-family:"titulos";
+	font-size:19px;
+	color:#FF7C00;
+	margin-left:5px;
+	}
+	
+	
+.boton_naranja li{
+	padding-left:5px;
+	padding-right:5px;
+	padding:5px;
+	height:13px;
+	background-color:#FF7C00;
+	text-align:center;
+	width:143px;
+	color:#FFF;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	margin-left:45px;
+	font-size:11px;
+	}
+	
+.boton_naranja li:hover{
+	width:143px;
+	padding:5px;
+	height:13px;
+	background-color:#FFF;
+	text-align:center;
+	color:#FF7C00;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	cursor:pointer;
+	}
+.boton_gris li{
+	padding-left:5px;
+	padding-right:5px;
+	padding:5px;
+	height:13px;
+	background-color:#B1B3B4;
+	text-align:center;
+	width:143px;
+	color:#3E3D40;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	margin-left:45px;
+	font-size:11px;
+	}
+	
+.boton_gris li:hover{
+	width:143px;
+	padding:5px;
+	height:13px;
+	background-color:#3E3D40;
+	text-align:center;
+	color:#B1B3B4;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	cursor:pointer;
+	}
+.descripcion_del_anuncio{
+	width:632px;
+	font-size:13px;
+	}
+.boton_naranja_dos li{
+	padding-left:5px;
+	padding-right:5px;
+	padding:5px;
+	height:13px;
+	background-color:#FF7C00;
+	text-align:center;
+	width:100px;
+	color:#FFF;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	font-size:11px;
+	margin-top:10px;
+	margin-bottom::10px;
+	}
+	
+.boton_naranja_dos li:hover{
+	width:100px;
+	padding:5px;
+	height:13px;
+	background-color:#FFF;
+	text-align:center;
+	color:#FF7C00;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	cursor:pointer;
+	margin-top:10px;
+	margin-bottom::10px;
+	}
+	
+.youtube_video{
+	width:291px;
+	height:184px;
+	margin-top:15px;
+	}
+	
+.boton_rojo_dos li{
+	padding-left:5px;
+	padding-right:5px;
+	padding:5px;
+	height:13px;
+	background-color:#E2001A;
+	text-align:center;
+	width:120px;
+	color:#FFF;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	font-size:11px;
+
+	margin-top:10px;
+	margin-bottom::10px;
+	}
+	
+.boton_rojo_dos li:hover{
+	width:120px;
+	padding:5px;
+	height:13px;
+	background-color:#FFF;
+	text-align:center;
+	color:#E2001A;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	cursor:pointer;
+	margin-top:10px;
+	margin-bottom::10px;
+	}
+.consejos_advertencias{
+	width:648px;
+	height:241px;
+	padding:5px;
+	background-color:#ECEDED;
+	font-size:12px;
+	margin-top:10px;
+	}
+.contenedor_contactar{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 50;
+   width: 100%;
+   height: 1600px;
+   background-image:url(../images/fondotabla.png);
+   z-index:150;}
+   
+   .contenedor_contactar_previo{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 50;
+   width: 100%;
+   height: 1600px;
+   background-image:url(../images/fondotabla.png);
+   z-index:160;}
+   
+.contactar_al_aunuciante{
+	width:427px;
+	padding:10px;
+	height:540px;
+	border: 5px solid #57B6B4;
+	background-color:#FFF;
+	margin:0 auto;
+	}
+.contenedor_cerrar_contactar{
+	width:427px;
+	height:66px;
+	margin: 0 auto;
+	text-align:right;
+	}
+.formu_contacto{
+	font-family:'select';
+	background-color:#B1B3B4;
+	color:#FFF;
+	font-size:16px;}
+	
+
+.boton_naranja_tres li{
+	float:right;
+	padding-left:5px;
+	padding-right:5px;
+	padding:5px;
+	height:13px;
+	background-color:#FF7C00;
+	text-align:center;
+	width:80px;
+	color:#FFF;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	font-size:11px;
+	margin-top:10px;
+	margin-bottom::10px;
+	}
+	
+.boton_naranja_tres li:hover{
+	width:80px;
+	padding:5px;
+	height:13px;
+	background-color:#FFF;
+	text-align:center;
+	color:#FF7C00;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	cursor:pointer;
+	margin-top:10px;
+	margin-bottom::10px;
+	}
+.contenedor_publicar_anuncio{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 50;
+   width: 100%;
+   height: 1600px;
+   background-image:url(../images/fondotabla.png);
+   z-index:150;
+   padding-top:40px;}
+.pubicar_anuncio{
+	margin-top:20px;
+	width:845px;
+	height:1000px;
+	margin:0px auto;
+	overflow: auto;
+	/*overflow-y:hidden;-ms-overflow-y:hidden;
+	overflow-X:hidden;-ms-overflow-X:hidden;*/
+	}
+.numeros_publicar_anuncio{
+	width:740px;
+	height:85px;
+	background-image:url(../images/fondo_numeros.png);
+	float:left;
+}
+.crerar_publicar_anuncio{
+	width:66px;
+	height:68px;
+	float: right;
+	margin-right:5px;
+	}
+.listado_numeros_anuncio li{
+	list-style:none;
+	float:left;
+	width:99px;
+	height:83px;
+	background-image:url(../images/num_publicacion.png);
+	background-repeat:no-repeat;
+	font-family:'titulos';
+	font-size:50px;
+	color:#762EA4;
+	padding-top:11px;
+	padding-left:28px;
+	}
+.numero_seccion{
+	list-style:none;
+	float:left;
+	width:99px;
+	height:83px;
+	background-image:url(../images/num_select_publicacion.png)!important;
+	background-repeat:no-repeat;
+	font-family:'titulos';
+	font-size:50px;
+	color:#FFF!important;
+	padding-top:11px;
+	padding-left:28px;
+	}
+.descipcion_pasos{
+	width:840px;
+	height:480px;
+	background-color: #FFF;
+	border:2px solid #762EA4;
+	margin-top:70px;}
+.descipcion_pasos_largo{
+	width:840px;
+	height:960px;
+	background-color: #FFF;
+	border:2px solid #762EA4;
+	margin-top:70px;}
+.titulo_de_pasos{
+	width:840;
+	height:110px;
+	font-family:'titulos';
+	font-size:63px;
+	color:#762EA4;
+	text-align:center;}
+.instrucciones_pasos{
+	width:830px;
+	height:44px;
+	background-color:#762EA4;
+	color:#FFFFFF;
+	font-size:29px;
+	padding-left:10px;}
+.sub_instrucciones_pasos{
+	width:1005px;
+	height:35px;
+	color:#762EA4;
+    border-bottom:2px solid #762EA4;
+	border-TOP:2px solid #762EA4;
+	font-size:24px;
+	padding-left:10px;
+	margin-left:-10px;
+	}
+.contenido_indicacion{
+	width:840px;
+	height:325px;
+	color:#762EA4;
+	font-size:18px;
+	}
+.radios_secciones{
+	margin-left:100px;
+	margin-top:40px;
+	float:left;
+	}
+.perro_paso_uno{
+	margin-left:100px;
+	margin-top:40px;
+	float:left;
+	}
+.morado li{
+	margin-left:700px;
+	margin-top:250px;
+	
+	width:134px;
+	height:42px;
+	color:#FFFFFF;
+	background-image:url(../images/boton_redondo.png);
+	background-repeat:no-repeat;
+	text-align:center;
+	padding-top:10px;}
+	
+.morado li:hover{
+	background-image:url(../images/boton_redondo_over.png);
+	color:#762EA4;
+	cursor:pointer;
+	}
+	
+.morado_15{
+	float:left;}
+	.morado_15 li{
+		float:left;
+	margin-left:700px;
+	margin-top:15px;
+	font-size:18px;
+	width:134px;
+	height:42px;
+	color:#FFFFFF;
+	background-image:url(../images/boton_redondo.png);
+	background-repeat:no-repeat;
+	text-align:center;
+	padding-top:10px;}
+	
+.morado_15 li:hover{
+	background-image:url(../images/boton_redondo_over.png);
+	color:#762EA4;
+	cursor:pointer;
+	}
+	
+.paquetes{
+	margin-top:15px;
+	float: left;
+	width: 217px;
+	height:184px;
+	margin-left: 25px;
+	margin-right:5px;
+	box-shadow: 2px 2px 5px #999;
+	margin-bottom:5px;
+	font-size:13px;
+    color:#000000;
+	}
+.paquetes_derecha{
+	margin-top:15px;
+	float: left;
+	width: 217px;
+	height:184px;
+	box-shadow: 2px 2px 5px #999;
+	margin-bottom:5px;
+	font-size:13px;
+	margin-left: 20px;
+	color:#000000;
+	}
+.paquetes_izquierda{
+	margin-top:15px;
+	float: left;
+	width: 217px;
+	height:184px;
+	box-shadow: 2px 2px 5px #999;
+	margin-bottom:5px;
+	color:#000000;
+	}
+.title_paquetes{
+	height:29px;
+	}
+.title_paquetes img{
+	float:left;
+	margin-right:10px;
+	}
+.precio_paquete_lite{
+	width:145px;
+	text-align:right;
+	padding-right:10px;
+	float:right;}
+.el_titulo_paquete_lite{
+	color:#E95D0F;
+	font-weight:bold;
+	font-size:13px;
+	float:left;
+	}
+.descripcion_precio_paquete_lite{
+	color:#000000;
+	margin-left:5px;
+	float:left;
+	height:11px;
+	padding-top:1px;
+	font-size:11px;
+	}
+.precio_paquete_regular{
+	width:46px;
+	color:#7DA615;
+	font-weight:bold;
+	font-size:13px;
+	text-align:right;
+	padding-right:10px;
+	height:15px;
+	float:right;}
+.precio_paquete_premium{
+	width:46px;
+	color:#762EA4;
+	font-weight:bold;
+	font-size:13px;
+	text-align:right;
+	padding-right:15px;
+	height:15px;
+	float:right;}
+	
+.title_paquetes_titilos{
+	float:left;
+	color:#58585A;
+	width:300;
+	margin-top:5px;
+	font-family:"titulos";
+	font-size: 15px;}
+.margen{
+	margin:5px;}
+.lateral_lite{
+	height:184px;
+	width:20px;
+	background-color:#E95D0F;
+	z-index:4;
+	float:right;}
+.lateral_regular{
+	height:184px;
+	width:20px;
+	background-color:#7DA615;
+	z-index:4;
+	float:right;}
+.lateral_premium{
+	height:184px;
+	width:20px;
+	background-color:#762EA4;
+	z-index:4;
+	float:right;}
+.descripcion_paquetes{
+	margin-top:10px;
+	padding:5px;
+	width:100%;
+	height:93px;
+	font-size:11px;
+	text-align: left;
+	}
+.iconos_paquetes {
+	margin-bottom:0px;
+	padding-top:2px;
+	width:100%;
+	height:63px;
+	}
+.iconos_paquetes li{
+	list-style:none;
+	float:left;
+	margin-left:4px;
+	margin-bottom:5px;}
+.cantidades_detalle_paquete_lite{
+	margin-bottom:0px;
+	text-align:center;
+	font-size:8px;
+	color:#FFF;
+	width:34px;
+	height:11px;
+	background-color:#E95D0F;}
+.cantidades_detalle_paquete_regular{
+	margin-bottom:0px;
+	text-align:center;
+	font-size:8px;
+	color:#FFF;
+	width:34px;
+	height:11px;
+	background-color:#7DA615;}
+.cantidades_detalle_paquete_premium{
+	margin-bottom:0px;
+	text-align:center;
+	font-size:8px;
+	color:#FFF;
+	width:34px;
+	height:11px;
+	background-color:#762EA4;}
+.cantidades_detalle_paquete_of{
+	margin-bottom:0px;
+	text-align:center;
+	font-size:8px;
+	color:#FFF;
+	width:34px;
+	height:11px;
+	background-color:#C6C7C8;}
+.reset{
+	color:#000000;
+	}
+.contenedor_paquetes{
+	margin-left:70px;
+	}
+.contenido_indicacion_formulario{
+	font-size:13px;
+	color:#762EA4;
+	padding:10px;
+	text-align:left;
+	height:500px;
+	}
+.margen_25_rigth{
+	margin-right:25px;
+	}
+.margen_15_left{
+	margin-left:15px;}
+.background_morado_35{
+	color:#FFFFFF;
+	margin-right:35px;
+	background-color:#762EA4;
+	border:hidden;
+	}
+.background_morado_55{
+	color:#FFFFFF;
+	margin-right:55px;
+	background-color:#762EA4;
+	border:hidden;
+	}
+.background_morado{
+    color:#FFFFFF;
+	background-color:#762EA4;
+	border:hidden;
+	}
+.background_gris_35{
+	color:#762EA4;
+	margin-right:35px;
+	background-color:#D9DADB;
+	border:hidden;
+	}
+.background_gris_55{
+	color:#762EA4;
+	margin-right:55px;
+	background-color:#D9DADB;
+	border:hidden;
+	}
+.background_gris_100{
+	color:#762EA4;
+	margin-right:100px;
+	background-color:#D9DADB;
+	border:hidden;
+	}
+.background_gris{
+	color:#762EA4;
+	background-color:#D9DADB;
+	border:hidden;
+	}
+.tipo_paquete_pago{
+	width:285px;
+	height:167px;
+	float:left;
+	background-color:#003300;
+	}
+.descripcion_paquete_pago{
+	width:241px;
+	height:167px;
+	background-color:#0000FF;
+	}

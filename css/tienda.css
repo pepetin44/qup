@@ -1,0 +1,164 @@
+.subti_info_tienda{
+	color:#762EA4;
+	}
+.contenedor_producto{
+width:180px;
+	height:232px;
+	float:left;
+	}
+.contenedor_picture{
+	width:184px;
+	height:159px;
+	background-color: #FFF;
+	}
+.contenedor_descripcion_precio_producto{
+	width:180px;
+	height:44px;
+	text-align:center;
+	border:2px solid #ECEDED;
+	}
+.nombre_producto{
+	font-size:15px;
+	color:#58585A;
+	}
+.precio_producto{
+	color:#000000;
+	font-size:18px;
+	}
+.anuncios li:hover{
+	cursor:pointer;
+	color:#C3F;
+	}
+.contenedor_detalle_anuncio{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 50;
+   width: 100%;
+   height: 1600px;
+   background-image:url(../images/fondotabla.png);}
+   
+.crerar_detalle_anuncio{
+	width:664px;
+	text-align:right;
+	margin:0px auto;
+	margin-top:50px;
+	
+	}
+.contenido_producto{
+	width:664px;
+	height:374px;
+	background-color: #FFF;
+	margin:0px auto;
+	margin-top:10px;
+	padding:10px;
+	}
+.contenedor_galeria_producto{
+	width:282px;
+	height:348px;
+	margin-top:10px;
+	}
+	
+#nav_producto { 
+height:80px; 
+overflow: scroll; 
+overflow-y: hidden;
+width:280px;
+margin-top:280px;
+position:absolute;
+}
+#nav_producto li { 
+width: 50px;
+margin: 8px; 
+list-style: none;
+float:left;
+}
+#nav_producto a { 
+width: 61px; 
+padding: 3px; 
+display: block; 
+border: 1px solid #ccc; 
+}
+#nav_producto li.activeSlide a { 
+background: #7EA715; 
+}
+#nav_producto a:focus { 
+outline: none; 
+}
+#nav_producto img { 
+border: none;
+ display: block;
+  }
+#slideshow_producto{
+	position:absolute;}
+ 
+.titulo_producto{
+	width:333px;
+	height:50px;
+	font-size:30px;
+	color: #7EA715;
+	font-family:'titulos';
+	float:right;
+	text-align:left;
+	margin-top:-370px;
+	}
+.decripcion_producto{
+	width:333px;
+	height:182px;
+	float:right;
+	margin-top:-320px;
+	}
+.costo_producto{
+	width:342px;
+	height:33px;
+	font-size:14px;
+    border-top:2px solid #B1B3B4;
+    border-bottom:2px solid #B1B3B4;
+	float:right;
+	margin-top:-138px;
+	font-size:16px;
+	padding-top:10px;
+	}
+
+.boton_verde{
+	float: right;
+	margin-top:-60px;
+	}
+
+.boton_verde li{
+	padding-left:5px;
+	padding-right:5px;
+	padding:5px;
+	height:13px;
+	background-color:#7EA715;
+	text-align:center;
+	width:143px;
+	color:#FFF;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	margin-left:45px;
+	font-size:11px;
+	}
+	
+.boton_verde li:hover{
+	width:143px;
+	padding:5px;
+	height:13px;
+	background-color:#FFF;
+	text-align:center;
+	color:#7EA715;
+	box-shadow: 2px 2px 7px #999;
+	list-style:none;
+	cursor:pointer;
+	}
+.select_producto{
+	border-color:2px solid #ECEDED;
+	font-family:'select';
+	font-size:15px;
+	}
+.contenedor_select_producto{
+	width:120px;
+	height:80px;
+	margin-left:330px;
+	margin-top:-85px;
+	}

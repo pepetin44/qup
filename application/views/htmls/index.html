@@ -1,0 +1,960 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Quierounperro</title>
+<link rel="shortcut icon" href="images/ico.ico" />
+<link type="text/css" rel="stylesheet" href="css/reset.css" media="screen"></link>
+
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/responsiveslides.css">
+ <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-latest.js" type="text/javascript"></script>
+<script src="js/funciones_.js" type="text/javascript"></script>
+<script src="js/funciones_index.js" type="text/javascript"></script>
+<script>
+if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
+
+  document.write('<link type="text/css" rel="stylesheet" href="css/index_.css" media="screen"></link> <link type="text/css" rel="stylesheet" href="css/general.css" media="screen"></link> ');
+  }
+if  (navigator.appName=="Microsoft Internet Explorer") {
+	
+	  document.write('<link type="text/css" rel="stylesheet" href="css/index_explorer.css" media="screen"></link>');}
+  </script>
+
+  <!-- [if lt IE ]>
+  <link type="text/css" rel="stylesheet" href="css/index_explorer.css" media="screen"></link>
+  <![endif]-->
+
+ <!-- <script src="js/jquery_1.4.js" type="text/javascript"></script>-->
+ <script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
+ <script src="js/responsiveslides.min.js"></script>
+   <script src="js/jquery-ui.js"></script>
+ <!-- include jQuery library -->
+
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>  
+</head>
+<body>
+
+<div class="contenedor_registro" id="contenedor_registro" style="display:none;"> <!-- Contenedor negro reistro-->
+<div class="cerrar_registro"> <img src="images/cerrar.png" onclick="oculta('contenedor_registro');"/> </div>
+
+<div class="registro_normal"> <!-- Contenedor morado registro -->
+
+<div class="titulo_registro"> REGISTRATE </div>
+
+<div class="texto_inputs" >
+<p> Nombre:</p>
+
+<p style="margin-top:15px;">Apellido:</p>
+
+<p style="margin-top:15px;">E-mail:</p>
+
+<p style="margin-top:15px;">Telefono:</p>
+
+<p style="margin-top:15px;">Contraseña:</p>
+
+<p>Confirmar contraseña:</p>
+
+ </div>
+<div class="contendeor_inputs" >
+<p><input type="text" name="nombre"/> *</p>
+<p><input type="text" name="apellido"/> *</p>
+
+<p><input type="text" name="e-mail"/> *</p>
+
+<p><input type="text" name="telefono"/></p>
+
+<p><input type="password" name="contraseña"/> *</p>
+</br>
+<p><input type="password" name="confirmar"/> *</p>
+
+
+</div>
+
+<div class=" informacion_adicional_registro">
+<input type="radio" name="radiog_dark" id="radio1" class="css-checkbox" checked="checked"  /><label for="radio1" class="css-label radGroup2" onclick="obtener_usuario('datos_faltantes_usuario'); oculta('datos_faltantes_negocio');oculta('datos_faltantes_asociacion');oculta('ocultar_info_adicional');muestra('llenar_info_adicional');"> Usuario</label>
+&nbsp;&nbsp;
+<input type="radio" name="radiog_dark" id="radio2" class="css-checkbox" />
+<label for="radio2" class="css-label radGroup2" onclick="obtener_usuario('datos_faltantes_negocio');oculta('datos_faltantes_usuario');oculta('datos_faltantes_asociacion');oculta('ocultar_info_adicional');oculta('ocultar_info_adicional');muestra('llenar_info_adicional');"> Negocio </label>
+&nbsp;&nbsp;
+<input type="radio" name="radiog_dark" id="radio3" class="css-checkbox" /><label for="radio3" class="css-label radGroup2"  onclick="obtener_usuario('datos_faltantes_asociacion'); oculta('datos_faltantes_usuario');oculta('datos_faltantes_negocio');oculta('ocultar_info_adicional');oculta('ocultar_info_adicional');muestra('llenar_info_adicional');"> Asociación </label>
+</br>
+<p><input name="" type="checkbox" value="" /> <label> Quiero recibir información acerca de promociones </label></p>
+
+
+<p><input name="" type="checkbox" value="" /> <label> He leído y acepto los <a href="#" class="link_blanco">Términos y Condiciones</a> y <a href="#" class="link_blanco">la Política de Privacidad</a> </label></p>
+
+
+<font class="asterisco">Los datos marcados con un astrisco (*) son obligatorios </font>
+ </div>
+ </br>
+<div class="llenar_info_adicional" id="llenar_info_adicional" onclick="mostrar_formulario(); muestra('ocultar_info_adicional'); oculta('llenar_info_adicional');">
+<input type="hidden" id="elegir_usuario" value="datos_faltantes_usuario"/>
+ <img src="images/flecha_blanca.png"/> Llenar información adicional </div>
+ 
+<div class="llenar_info_adicional" id="ocultar_info_adicional" onclick="oculta('datos_faltantes_usuario');oculta('datos_faltantes_negocio');oculta('datos_faltantes_asociacion');oculta('ocultar_info_adicional'); muestra('llenar_info_adicional');" style="display:none;">
+ <img src="images/flecha_blanca.png"/> Despues llenar información </div>
+
+<div id="datos_faltantes_usuario" class="datos_faltantes_usuario" style="display:none;">
+</br>
+<div class="datos_fiscales"> Datos fiscales </div>
+
+
+<div class="texto_inputs" >
+<p> Razón Social:</p>
+
+<p style="margin-top:15px;">RFC:</p>
+
+<p style="margin-top:15px;">Calle:</p>
+
+<p style="margin-top:15px;">No. Exterior:</p>
+
+<p style="margin-top:15px;">CP:</p>
+
+<p style="margin-top:15px;">Municipio:</p>
+
+<p style="margin-top:15px;">Estado:</p>
+
+<p style="margin-top:15px;">País:</p>
+
+
+ </div>
+
+<div class="contendeor_inputs" >
+<p><input type="text" name="razon"/> </p>
+<p><input type="text" name="RFC"/> </p>
+
+<p><input type="text" name="calle"/> </p>
+
+<p><input type="text" name="no_exterior"/></p>
+
+<p><input type="text" name="cp"/> </p>
+
+<p><input type="text" name="municipio"/> </p>
+<p><select name="estado"/> <option> --- </option>  </select></p>
+<p><select name="pais"/> <option> --- </option> </select> </p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<div id="datos_faltantes_negocio" class="datos_faltantes_negocio" style="display:none;"> <!--- Inicio datos negocio -->
+
+
+<div class="datos_fiscales"> Datos fiscales </div>
+
+<div class="texto_inputs" >
+<p> Razón Social:</p>
+
+<p style="margin-top:15px;">RFC:</p>
+
+<p style="margin-top:15px;">Calle:</p>
+
+<p style="margin-top:15px;">No. Exterior:</p>
+
+<p style="margin-top:15px;">CP:</p>
+
+<p style="margin-top:15px;">Municipio:</p>
+
+<p style="margin-top:15px;">Estado:</p>
+
+<p style="margin-top:15px;">País:</p>
+
+
+ </div>
+
+<div class="contendeor_inputs" >
+<p><input type="text" name="razon"/> </p>
+<p><input type="text" name="RFC"/> </p>
+
+<p><input type="text" name="calle"/> </p>
+
+<p><input type="text" name="no_exterior"/></p>
+
+<p><input type="text" name="cp"/> </p>
+
+<p><input type="text" name="municipio"/> </p>
+<p><select name="estado"/> <option> --- </option>  </select></p>
+<p><select name="pais"/> <option> --- </option> </select> </p>
+
+
+</div>
+
+<div class="datos_fiscales"> Datos del negocio </div>
+
+<div class="texto_inputs" >
+Nombre:
+</div>
+
+<div class="contendeor_inputs" >
+<p><input type="text" name="nombre_negocio"/> </p>
+</div>
+<div class="giro_negocio"> 
+
+<div class="contenedor_giros">
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_0" />
+      Accesorios para mascotas</label>
+    </br>
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_1" />
+      Veterinaria</label>
+  </br>
+  
+     <label>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_2" />
+      Estetica canina</label>
+          <label>
+          </br>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_3" />
+    Adiestramiento canino</label>
+    
+  
+  
+  </div>
+  
+  <div class="contenedor_giros">
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_4" />
+     Centro de sociabilización</label>
+    </br>
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_5" />
+     Criadero de perros</label>
+  </br>
+  
+     <label>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_6" />
+      Hotel y pensión canina</label>
+          <label>
+          </br>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_7" />
+   Alimento y medicamento </label>
+    
+  
+  
+  </div>
+   <div class="contenedor_giros">
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_8" />
+      Guarderia de perros</label>
+    </br>
+    <label>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_9" />
+      Tienda de mascotas</label>
+  </br>
+  
+     <label>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_10" />
+      Servicios funerarios</label>
+          <label>
+          </br>
+      <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1_11" />
+     Servico de paseo</label>
+    
+  
+  
+  </div>
+
+</div>
+
+
+<div class="texto_inputs" >
+<p>Contacto:</p>
+
+<p style="margin-top:15px;">Teléfono:</p>
+<p style="margin-top:15px;">Calle:</p>
+<p style="margin-top:15px;">Número:</p>
+<p style="margin-top:15px;">Colonia:</p>
+<p style="margin-top:15px;">Municipio:</p>
+<p style="margin-top:15px;">Estado:</p>
+<p style="margin-top:15px;">Código Postal:</p>
+<p style="margin-top:15px;">E-mail:</p>
+<p style="margin-top:15px;">Página web:</p>
+<p style="margin-top:15px;">Logo:</p>
+<p style="margin-top:15px;">Descripción:</p>
+<p style="margin-top:35px;">Ubicación:</p>
+</div>
+
+<div class="contendeor_inputs" >
+<p><input type="text" name="nombre_contacto"/> </p>
+<p><input style="margin-top:3px;" type="text" name="telefono"/> </p>
+<p><input style="margin-top:3px;" type="text" name="calle"/> </p>
+<p><input style="margin-top:3px;" type="text" name="num"/> </p>
+<p><input style="margin-top:3px;" type="text" name="colonia"/> </p>
+<p><input style="margin-top:3px;" type="text" name="municipio"/> </p>
+<p><input style="margin-top:3px;" type="text" name="estado"/> </p>
+<p><input style="margin-top:3px;" type="text" name="cp"/> </p>
+<p><input style="margin-top:3px;" type="text" name="e-mail"/> </p>
+<p><input style="margin-top:3px;" type="text" name="pagina_web"/> </p>
+<p><input style="margin-top:3px;" type="file" name="logo"/> </p>
+<p><textarea rows="3" cols="40" style="margin-top:3px;" name="descricion"/> </textarea> </p>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(20.6144226, -100.4057373)
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    
+    
+    <div id="map-canvas"></div>
+    
+</div>
+
+
+
+
+</div><!-- fin datos negocio--->
+
+
+
+<div id="datos_faltantes_asociacion" class="datos_faltantes_asociacion" style="display:none;"> <!--- Inicio datos Asociación -->
+
+
+<div class="datos_fiscales"> Datos fiscales </div>
+
+<div class="texto_inputs" >
+<p> Razón Social:</p>
+
+<p style="margin-top:15px;">RFC:</p>
+
+<p style="margin-top:15px;">Calle:</p>
+
+<p style="margin-top:15px;">No. Exterior:</p>
+
+<p style="margin-top:15px;">CP:</p>
+
+<p style="margin-top:15px;">Municipio:</p>
+
+<p style="margin-top:15px;">Estado:</p>
+
+<p style="margin-top:15px;">País:</p>
+
+
+ </div>
+
+<div class="contendeor_inputs" >
+<p><input type="text" name="razon"/> </p>
+<p><input type="text" name="RFC"/> </p>
+
+<p><input type="text" name="calle"/> </p>
+
+<p><input type="text" name="no_exterior"/></p>
+
+<p><input type="text" name="cp"/> </p>
+
+<p><input type="text" name="municipio"/> </p>
+<p><select name="estado"/> <option> --- </option>  </select></p>
+<p><select name="pais"/> <option> --- </option> </select> </p>
+
+
+</div>
+
+<div class="datos_fiscales"> Datos de la Asociación </div>
+
+
+
+
+<div class="texto_inputs" >
+<p> Nombre: </p>
+<p style="margin-top:15px;">Contacto:</p>
+
+<p style="margin-top:15px;">Teléfono:</p>
+<p style="margin-top:15px;">Calle:</p>
+<p style="margin-top:15px;">Número:</p>
+<p style="margin-top:15px;">Colonia:</p>
+<p style="margin-top:15px;">Municipio:</p>
+<p style="margin-top:15px;">Estado:</p>
+<p style="margin-top:15px;">Código Postal:</p>
+<p style="margin-top:15px;">E-mail:</p>
+<p style="margin-top:15px;">Página web:</p>
+<p style="margin-top:15px;">Logo:</p>
+<p style="margin-top:15px;">Descripción:</p>
+<p style="margin-top:35px;">Ubicación:</p>
+</div>
+
+<div class="contendeor_inputs" >
+<p><input type="text" name="nombre_ac"/> </p>
+<p><input type="text" name="nombre_contacto"/> </p>
+<p><input style="margin-top:3px;" type="text" name="telefono"/> </p>
+<p><input style="margin-top:3px;" type="text" name="calle"/> </p>
+<p><input style="margin-top:3px;" type="text" name="num"/> </p>
+<p><input style="margin-top:3px;" type="text" name="colonia"/> </p>
+<p><input style="margin-top:3px;" type="text" name="municipio"/> </p>
+<p><input style="margin-top:3px;" type="text" name="estado"/> </p>
+<p><input style="margin-top:3px;" type="text" name="cp"/> </p>
+<p><input style="margin-top:3px;" type="text" name="e-mail"/> </p>
+<p><input style="margin-top:3px;" type="text" name="pagina_web"/> </p>
+<p><input style="margin-top:3px;" type="file" name="logo"/> </p>
+<p><textarea rows="3" cols="40" style="margin-top:3px;" name="descricion"/> </textarea> </p>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+var map;
+function initialize_dos() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(20.6144226, -100.4057373)
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas_dos'),
+      mapOptions);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize_dos);
+
+    </script>
+    
+    
+    <div id="map-canvas_dos"></div>
+    
+</div>
+
+
+
+
+</div><!-- fin datos Asociacion--->
+  
+
+</br>
+<ul class="morado_reg">
+<li>
+Suscribir
+</li>
+</ul>
+
+
+</div><!-- fin contenedor morado registro -->
+
+
+</div> <!-- Fin contenedor negro registro -->
+
+
+
+
+
+
+
+
+<div id="mini_menu" >
+<input type="hidden" id="efecto" value="corre"/>
+<img src="images/bajar_menu_dos.png" id="bajar_menu" style="float:left; margin-left:10px;" onclick="oculta('bajar_menu'); muestra('menu_oculto');"/>
+<div id="menu_oculto" class="menu_principal" style=" display:none;">
+<div id="contenedor_menu_principal" class="contenedor_menu_principal"> 
+<ul class="principal">
+<li>
+Inicio
+</li>
+<li>
+ <a href="venta.html"> Venta </a>
+</li>
+<li>
+Cruza
+</li>
+<li>
+Adopción
+</li>
+<li>
+Tienda
+</li>
+<li>
+Directorio
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="iconos_ocultos" class="iconos_ocultos">
+
+
+<ul class="iconos_estatus">
+<li>
+
+<img id="horizontal_compras_mini"  onmouseover="mostrar_icono('horizontal_compras'); ocultar_icono('horizontal_compras_mini');"class="iconos_flotantes" src="images/compras_horizontal_mini.png"/>
+
+<img class="iconos_flotantes2" onmouseout="mostrar_icono('horizontal_compras_mini'); ocultar_icono('horizontal_compras');"  id="horizontal_compras" src="images/compras_horizontal.png"/>
+
+</li>
+<li>
+<img id="horizontal_ingresar_mini" onmouseover="mostrar_icono('horizontal_ingresar'); ocultar_icono('horizontal_ingresar_mini');" class="iconos_flotantes" src="images/ingresar_horizontal_mini.png"/>
+
+<img class="iconos_flotantes2" onmouseout="mostrar_icono('horizontal_ingresar_mini'); ocultar_icono('horizontal_ingresar');" id="horizontal_ingresar" src="images/ingresar_horizontal.png"/>
+</li>
+
+<li>
+<img id="horizontal_registrate_mini" onmouseover="mostrar_icono('horizontal_registrate'); ocultar_icono('horizontal_registrate_mini');"class="iconos_flotantes" src="images/registrate_horizontal_mini.png"/>
+
+<img class="iconos_flotantes2" onmouseout="mostrar_icono('horizontal_registrate_mini'); ocultar_icono('horizontal_registrate');" id="horizontal_registrate" src="images/registrate_horizontal.png"/>
+</li>
+</ul>
+</div>
+
+<div class="">
+
+<div class="contenedor_central_banner">
+
+<div id="contenedor_central_superior" class="contenedor_central_superior">
+
+<div id="banner_superior">
+<img src="images/logo.png" width="348" height="93" class="contenido_superior"/>
+
+<div class="slideshow">
+<img src="images/banner_superior/1.png" width="638" height="93"/>
+<img src="images/banner_superior/2.png" width="638" height="93"/>
+<img src="images/banner_superior/3.png" width="638" height="93"/>
+	</div>
+
+</br>
+
+</div>
+</div>
+
+<div class="menu_principal" id="menu_principal" >
+<div id="contenedor_menu_principal" class="contenedor_menu_principal"> 
+<ul class="principal">
+<li>
+Inicio
+</li>
+<li>
+<a href="venta.html"> Venta </a>
+</li>
+<li>
+Cruza
+</li>
+<li>
+Adopción
+</li>
+<li>
+Tienda
+</li>
+<li>
+Directorio
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<center>
+</br>
+<div id="contenedor_central">
+
+<div id="espacio_izquierda" class="seccion_izquierda">
+<ul class="iconos" id="iconos_grandes">
+<li> <img src="images/compras.png"/></li>
+<li><img src="images/sesion.png"/></li>
+<li onclick="muestra('contenedor_registro');">
+<img src="images/registrate.png"/>
+</li>
+</ul>
+</div>
+<div id="banner_central">
+       <div class="container" id="carousel_container">
+    <div class="row">
+      <div class="span12">
+        <div id="artCarousel" class="carousel slide">
+          <ol class="carousel-indicators">
+            <li data-target="#artCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#artCarousel" data-slide-to="1"></li>
+            <li data-target="#artCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active"><img src="images/900x500_1.jpg" alt="Model 1">
+              <div class="carousel-caption">
+                <p>En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.</p>
+              </div>
+            </div>
+            <div class="item"><a href="#" target="_blank"><img src="images/900x500_2.jpg" alt="Model 2"></a>
+            
+             <div class="carousel-caption">
+               Adopta a un perrito, sera tu compañero perfecto.
+              </div>
+            
+            </div>
+           <div class="item"><a href="#" target="_blank"><img src="images/900x500_3.jpg" alt="Model 2"></a>
+            
+             <div class="carousel-caption">
+               Vende con nosotros a tus perritos.
+              </div>
+            
+            </div>
+          </div>
+          <a class="left carousel-control" href="#artCarousel" data-slide="prev">&lsaquo;</a> <a class="right carousel-control" href="#artCarousel" data-slide="next">&rsaquo;</a> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="seccion_derecha" id="seccion_derecha">
+<div id="contenido_fb" style="height:192px; margin-bottom:15px; ">
+<!-- MyFavoritePetShop -->
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <div class="fb-like-box" data-href="https://www.facebook.com/interKreativa" data-height="192" data-width="215" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
+</div>
+
+<div id="banner_publicidad_derecha" class="slideshow_dos" style="height:200px; margin-top:10px;">
+<img src="images/banner_lateral/1.png" width="215" height="192"/>
+<img src="images/banner_lateral/2.png" alt="">
+<img src="images/banner_lateral/3.png" alt="">
+   
+</div>
+
+</div>
+<div id="contenedor_paquetes" class="contenedor_paquetes">
+
+
+<a href="#" class="reset">
+<div class="paquetes_izquierda">
+<div class="title_paquetes">
+<div class="lateral_lite"></div>
+  <img src="images/perrito_lite.png" class="margen"/> <font class="title_paquetes_titilos"> PAQUETE LITE </font>
+</div>
+<div class="precio_paquete_lite">  <div class="el_titulo_paquete_lite"> Gratis </div>  <div class="descripcion_precio_paquete_lite">al crear tu usuario</div> </div>
+</br>
+ <div class="descripcion_paquetes">
+ <strong>Incluye:</strong>
+<ul class="contenido_paquetes">
+<li>
+* 1 fotos
+</li>
+
+<li>
+* Texto de 50 caracteres 
+</li>
+<li>
+ * Vigencia de 30 días.
+</li>
+</ul>
+ </div>
+ <div class="iconos_paquetes">
+ <ul>
+ <li>
+ <div class="cantidades_detalle_paquete_lite"> 10 </div>
+ <img src="images/icono_camara.png"/>
+ </li>
+  <li>
+   <div class="cantidades_detalle_paquete_lite"> 10 </div>
+ <img src="images/icono_texto.png" >
+ </li>
+  <li>
+   <div class="cantidades_detalle_paquete_lite"> 10 </div>
+ <img src="images/icono_calendario.png"/>
+ </li>
+  <li>
+   <div class="cantidades_detalle_paquete_of"> 0 </div>
+ <img src="images/icono_ticket_of.png" />
+ </li>
+   <li>
+   <div class="cantidades_detalle_paquete_of"> 0 </div>
+ <img src="images/icono_video_of.png" />
+ </li>
+ </ul>
+ </div>
+
+</div>
+</a>
+<a href="#" class="reset">
+<div class="paquetes">
+<div class="title_paquetes">
+<div class="lateral_regular"></div>
+  <img src="images/perrito_regular.png" class="margen"/> <font class="title_paquetes_titilos"> PAQUETE REGULAR </font>
+
+</div>
+<div class="precio_paquete_regular"> $89.00 </div>
+</br>
+ <div class="descripcion_paquetes">
+ <strong>Incluye:</strong>
+<ul class="contenido_paquetes">
+<li>
+* 5 fotos
+</li>
+<li>
+* Texto de 150 caracteres 
+</li>
+<li>
+* 1 video
+</li>
+<li>
+ * 2 cupones
+</li>
+<li>
+ * Vigencia de 30 días
+</li>
+</ul>
+ </div>
+ <div class="iconos_paquetes">
+ <ul>
+ <li>
+ <div class="cantidades_detalle_paquete_regular"> 5 </div>
+ <img src="images/icono_camara_regular.png"/>
+ </li>
+  <li>
+   <div class="cantidades_detalle_paquete_regular"> 150 </div>
+ <img src="images/icono_texto_regular.png" >
+ </li>
+  <li>
+   <div class="cantidades_detalle_paquete_regular"> 30 </div>
+ <img src="images/icono_calendario_regular.png"/>
+ </li>
+  <li>
+   <div class="cantidades_detalle_paquete_regular"> 2 </div>
+ <img src="images/icono_ticket_regular.png" />
+ </li>
+   <li>
+   <div class="cantidades_detalle_paquete_regular"> 1 </div>
+ <img src="images/icono_video_regular.png" />
+ </li>
+ </ul>
+ </div>
+
+</div>
+
+</a>
+<a href="#" class="reset">
+<div class="paquetes_derecha">
+<div class="title_paquetes">
+<div class="lateral_premium"></div>
+  <img src="images/perrito_premium.png" class="margen"/> <font class="title_paquetes_titilos"> PAQUETE PREMIUM </font>
+
+</div>
+ <div class="precio_paquete_premium"> $165.00 </div>
+</br>
+ <div class="descripcion_paquetes">
+ <strong>Incluye:</strong>
+<ul class="contenido_paquetes">
+<li>
+* 15 fotos
+</li>
+<li>
+* Caracteres ilimitados
+</li>
+<li>
+* 2 video
+</li>
+<li>
+ * 5 cupones
+</li>
+<li>
+ * Vigencia de 60 días
+</li>
+</ul>
+ </div>
+ <div class="iconos_paquetes">
+ <ul>
+ <li>
+ <div class="cantidades_detalle_paquete_premium"> 15 </div>
+ <img src="images/icono_camara_premium.png"/>
+ </li>
+  <li>
+   <div class="cantidades_detalle_paquete_premium"> ∞ </div>
+ <img src="images/icono_texto_premium.png" >
+ </li>
+  <li>
+   <div class="cantidades_detalle_paquete_premium"> 60 </div>
+ <img src="images/icono_calendario_premium.png"/>
+ </li>
+  <li>
+   <div class="cantidades_detalle_paquete_premium"> 5 </div>
+ <img src="images/icono_ticket_premium.png" />
+ </li>
+   <li>
+   <div class="cantidades_detalle_paquete_premium"> 2 </div>
+ <img src="images/icono_video_premium.png" />
+ </li>
+ </ul>
+ </div>
+ </div>
+</a>
+ </div><!-- Contenedor de paquetes  -->
+ 
+ 
+ <!-- Inician secciones de contenido -->
+ <!-- perros perdidos -->
+ <a href="#"  style="text-decoration:none; color:#000;" onmouseover="Mostrar('ver_perdidos');Ocultar('ver_raza');Ocultar('ver_mes');Ocultar('ver_curiosos');" >
+<div  id="perros_perdidos" class="seccion_inferior_izquierda" >
+
+<div class="contenido_secciones">
+<p class="titulo_segunda_seccion"> PERROS PERDIDOS </p>
+<p> <strong> Nombre:</strong> Lazy
+<strong>Raza:</strong> Akita
+<strong>Caracteristicas:</strong> Akita de color blanco, con cafe...</p>
+
+</div>
+<div  class="sub_imagenes_dos" >
+
+<img align="center" class="imagen_relleno" src="images/perros_perdidos/perro1.png" />
+
+<div id="ver_perdidos" class="ver_mas" style=" display:none;">  Ver más...  </div>
+
+</div>
+</div>
+</div>
+</a>
+<!-- End perros perdidos -->
+<!-- Raza del mes -->
+<a href="#" style="text-decoration:none; color:#000;" onmouseover="Mostrar('ver_raza'); Ocultar('ver_perdidos');Ocultar('ver_mes'); Ocultar('ver_curiosos')" >
+<div id="la_raza_mes" class="seccion_inferior_izquierda">
+<div class="contenido_secciones">
+<p class="titulo_segunda_seccion"> LA RAZA DEL MES </p>
+<p> 
+ El perro de raza labrador es el prototipo del perro de familia, ya que sue... 
+</p>
+
+</div>
+<div  class="sub_imagenes_dos" >
+
+<img align="center" class="imagen_relleno" src="images/raza_mes/la_raza.png" width="87" height="103" />
+
+
+<div id="ver_raza" class="ver_mas" style=" display:none;">  Ver más...  </div>
+
+</div>
+</div>
+</a>
+<!-- End raza del mes -->
+
+<!-- Eventos del mes -->
+<a href="#" style="text-decoration:none; color:#000;" onmouseover="Mostrar('ver_mes');Ocultar('ver_raza'); Ocultar('ver_perdidos');Ocultar('ver_curiosos');" >
+<div id="eventos_mes" class="seccion_inferior">
+<div class="contenido_secciones">
+<p class="titulo_segunda_seccion"> EVENTOS DEL MES </p>
+
+<p> Título: Expo Can México 2013.
+Fecha del evento: Del 13 al 22 de...
+</p>
+
+</div>
+<div  class="sub_imagenes_dos">
+<img class="imagen_relleno" src="images/eventos/eventos_mes.jpg" width="144" height="110" />
+<div id="ver_mes" class="ver_mas" style=" display:none;">  Ver más...  </div>
+
+</div>
+</div>
+</a>
+<!-- End eventos del mes -->
+<!-- Datos curiosos -->
+<a href="#" style="text-decoration:none; color:#000;" onmouseover="Mostrar('ver_curiosos');Ocultar('ver_raza'); Ocultar('ver_perdidos');Ocultar('ver_mes');" >
+<div id="datos_curiosos" class="seccion_inferior_derecha">
+<div class="contenido_secciones">
+<p class="titulo_segunda_seccion"> DATOS CURIOSOS </p>
+
+<p> 
+La primera semana de vida del cachorro la pasa el 90% del tiempo dormido...
+</p>
+
+</div>
+<div  class="sub_imagenes_dos">
+<img class="imagen_relleno" src="images/curiosos/curiosos1.png" width="63" height="119" />
+
+<div id="ver_curiosos" class="ver_mas" style=" display:none;">  Ver más...  </div>
+
+</div>
+
+</div>
+</a>
+<!-- End datos curioso -->
+
+</div><!-- Contenedor central -->
+
+
+<div class="separacion_final" >
+
+</div>
+
+<div id="menu_inferior" align="center" >
+<div id="acerca_nosotros" class="menu_inferiror">
+<p class="title_final">Acerca de nosotros</p>
+<div class="contenido_final">
+<ul class="sub_menu_inferior">
+<li>  - ¿Quiénes Somos? 
+</li>
+<li>- La comunidad QUP </li>
+</ul>
+</div>
+</div>
+<div id="politicas" class="menu_inferiror">
+<p class="title_final">Políticas</p>
+<div class="contenido_final">
+<ul class="sub_menu_inferior">
+<li> - Aviso de Privacidad </li>
+<li>  - Política de Provacidad </li>
+<li> - Términos y Condiciones </li>
+</ul>
+</div>
+</div>
+<div id="contacto" class="menu_inferiror">
+<p class="title_final">Contacto</p>
+<div class="contenido_final">
+<ul class="sub_menu_inferior">
+<li>- Tutorial</li>
+<li>- Publicidad </li>
+<li>- Soporte </li>
+<li>- Preguntas Frecuentes </li>
+</ul>
+</div>
+</div>
+</div>
+</br>
+</br>
+</br>
+</br></br>
+</br></br>
+</br>
+<div class="footer">
+<img src="images/perro_final.png" width="46" height="42"/>
+<a href="#" ><img  src="images/ico_fb.png" width="32" height="32" style="margin-top:10px;"/></a>
+<a href="#" class="margen"><img src="images/ico_tw.png" width="32" height="32" style="margin-top:10px;"/></a>
+</div>
+<div class="division_final">
+
+</div>
+<div class="pie_pagina">
+Copyright © 2014 QuieroUnPerro.com
+</div>
+</center>
+<script src="js/bootstrap.min.js"></script>
+  <script>
+    $('#artCarousel').carousel({
+      interval: 4000,
+	  effect:'random',
+      cycle: true
+    });
+  </script>
+  
+  
+  
+
+</body>
+</html>

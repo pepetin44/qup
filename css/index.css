@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	overflow:visible;}
+.superior {
+	margin-left:15%;	
+
+}
+.superior div {
+float:left;
+
+}
+
+@font-face
+{
+ font-family: 'miFuente';
+ src: url('../fonts/GOTHIC.ttf');
+}
+
+.menu_principal {
+	top:120px;
+	position: absolute;
+	z-index:10;
+	width:100%;
+	height:40px;
+	background-color:#7DA615;
+
+}
+.principal ul {
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 0px;!important
+
+}
+.principal li{
+    float:left;
+	margin-left:10px;
+	margin-right:10px;
+	text-align:center;
+	padding-top:10px;
+	text-decoration:none;
+	list-style:none;
+	color:#FFF;
+	font-size:18px;
+	font-family:"miFuente";
+	border-right:2px inset #FFF;
+	padding-right:5px;
+	}
+.principal li:hover {
+	padding:10px;
+	background-color:#762EA4;
+	cursor:hand;
+	}
+
+.iconos_sub_menu{
+	z-index:200;
+	margin-top:17%;
+	position:fixed;
+	float:left;
+	}
+	
+.iconos li{
+	margin-top:5px;
+	}
+.iconos li:hover{
+	cursor:hand;
+	}
+	
+.publicidad{
+	z-index:201;
+	margin-top:15%;
+	float: right;
+	margin-right:100px;
+	}
+	
+#content { 
+	clear: both;
+	
+}
