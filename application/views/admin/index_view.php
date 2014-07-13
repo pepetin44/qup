@@ -90,7 +90,7 @@ Mensajes
 </ul>
 </li>
 <li>
-Anuncios
+<a href = "<?php echo base_url()?>admin/principal/getAdminP" style= "text-decoration:none;color:#FFF;">Anuncios</a>
 </li>
 </ul>
 </div>
