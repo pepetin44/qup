@@ -74,6 +74,11 @@ class Principal extends CI_Controller {
     }
 
 
+    function getAdminP(){
+         $this->load->view('admin/adminIndex_view');
+    }
+
+
     
 
    
