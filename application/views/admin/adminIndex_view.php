@@ -8,8 +8,38 @@
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/administrador.css" media="screen"></link>
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/general.css" media="screen"></link>
 <script src="<?php echo base_url()?>js/funciones_.js" type="text/javascript"></script>
+</head>
+
+<script type="text/javascript" src="<?php echo base_url()?>js/jquery-1.8.2.min.js"></script>
+<script>
+jQuery(document).ready(function(){
+
+	 $(".seccion").click(function() {
+             var seccionNombre = $(this).attr('id');
+             var seccion = $(this).attr('name');
+             var uno = $("#numeroSeccionR").val(seccion);
+             var dos = $("#nombreSeccionR").val(seccionNombre);
+             $("#seccion").detach();
+             $('<label id="seccion">'+seccionNombre+'</label>').appendTo('#nombreSeccion');
+             
+
+             console.log(seccionNombre,seccion, uno, dos);
+     });
+
+     $("#genero").change(
+                function(){
+                    var thisValue = $(this).val();
+                    var nombreZona = $('#genero option:selected').html();
+                    console.log(thisValue, nombreZona);
+                    $("#nombreZona").detach();
+             		$('<label id="nombreZona">'+nombreZona+'</label>').appendTo('#zonaNombre');
+                    $("#zonaIDR").val(thisValue);
+    });       
+});
+</script>
 <body>
 
+<!-- ---------------------------------------------------- contenedor_modificaciones --------------- -->
 <div class="contenedor_modificaciones" id="contenedor_modificaciones" style="display:none"> <!-- Contenedor negro imagenes-->
 <div class="cerrar_modificaciones"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_modificaciones');"/> </div>
 
@@ -36,6 +66,10 @@ Guardar
 </div>
 
 </div> <!-- Fin contenedor negro imagenes -->
+<!-- ---------------------------------------------------- contenedor_modificaciones --------------- -->
+
+
+<!-- ---------------------------------------------------- contenedor_modificaciones_texto --------------- -->
 
 
 <div class="contenedor_modificaciones" id="contenedor_modificaciones_texto" style="display:none"> <!-- Contenedor negro imagenes-->
@@ -63,11 +97,11 @@ Guardar
 </div>
 
 </div> <!-- Fin contenedor negro imagenes -->
+<!-- ---------------------------------------------------- contenedor_modificaciones_texto --------------- -->
 
 
 
-
-
+<!-- ---------------------------------------------------- encabezado --------------- -->
 <div class="encabezado">
 <img  src="<?php echo base_url()?>images/logo_admin.png" width="258" height="88"  />
 
@@ -77,49 +111,49 @@ Guardar
 Pantallas
 <ul>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Inicio</a>
+<a href="#" id="INICIO" name="1" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Inicio</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Venta</a>
+<a href="#" id="VENTA" name="2" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Venta</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Cruza</a>
+<a href="#" id="CRUZA" name="3" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Cruza</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Directorio</a>
+<a href="#" id="DIRECTORIO" name="4" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Directorio</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Prefil de usuario</a>
+<a href="#" id="PERFIL DE USUARIO" name="5" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Prefil de usuario</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Adopción</a>
+<a href="#" id="ADOPCIÓN" name="6" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Adopción</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Perros Perdidos</a>
+<a href="#" id="PERROS PERDIDOS" name="7" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Perros Perdidos</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> La raza del mes</a>
+<a href="#" id="RAZA DEL MES" name="8" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> La raza del mes</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Evento del mes</a>
+<a href="#" id="EVENTO DEL MES" name="9" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Evento del mes</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Datos curiosos</a>
+<a href="#" id="DATOS CURIOSOS" name="10" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Datos curiosos</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Asociaciones Protectoras</a>
+<a href="#" id="ASOCIACIONES P." name="11" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Asociaciones Protectoras</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> ¿Quiénes somos?</a>
+<a href="#" id="¿QUIÉNES SOMOS?" name="12" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> ¿Quiénes somos?</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Tutorial</a>
+<a href="#" id="TUTORIAL" name="13" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Tutorial</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Publicidad</a>
+<a href="#" id="PUBLICIDAD" name="14" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Publicidad</a>
 </li>
 <li>
-<a href="<?php echo base_url()?>#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Preguntas frecuentes</a>
+<a href="#" id="PREGUNTAS F." name="15" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Preguntas frecuentes</a>
 </li>
 </ul>
 </li>
@@ -155,18 +189,22 @@ Anuncios
 </div>
 
 </div> <!-- fin wncabezado -->
+<!-- ---------------------------------------------------- encabezado --------------- -->
+
+
 
 <div class="contenedor_central">
 <div class="titulo_seccion">
-PANTALLAS-INICIO
+PANTALLAS- <label id="nombreSeccion"></label> 
 </div>
 <div class="contenedor_buscador">
 <div class="fondo_select">
-<select   class="estilo_select" id="genero">
-
+<select   class="estilo_select" id="genero" name="genero">
+ <option style="background-color: #999;" value = "">Seleccione la zona
+ </option>
  <?php if ($zonageografica != Null):
  	foreach ($zonageografica as $zona) {?>
-<option style="background-color: #999;" value = "<?php echo $zona -> zonaID; ?>"> 
+<option style="background-color: #999;" value = "<?php echo $zona -> zonaID; ?>" title="<?php echo $zona -> zona;?>"> 
 <?php echo $zona -> zona;?>
  </option>
  <?php }endif;?>
@@ -177,8 +215,12 @@ PANTALLAS-INICIO
 </div>
 
 <div class="subtitulo">
-ZONA- CENTRO
+ZONA- <label id="zonaNombre"></label>
 </div>
+
+<input type="hidden" name="numeroSeccionR" id="numeroSeccionR" value="" />
+<input type="hidden" name="nombreSeccionR" id="nombreSeccionR" value=""/>
+<input type="hidden" name="zonaIDR" id="zonaIDR" value=""/>
 
 </br>
 <table class="tabla_carrito" width="990">
