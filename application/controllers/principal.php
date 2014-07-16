@@ -6,9 +6,10 @@ class Principal extends CI_Controller {
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
 		$this->load->model('defaultdata_model');
+		$this->load->model('file_model');
 		$this->load->library('googlemaps');
 
-		if(is_logged()&&$this->session->userdata('tipoUsuario')==1){
+		/*if(is_logged()&&$this->session->userdata('tipoUsuario')==1){
                 redirect('usuario/cuenta/activado');
                 } 
                 if(is_logged()&&$this->session->userdata('tipoUsuario')==2) {
@@ -19,7 +20,7 @@ class Principal extends CI_Controller {
                 }
                 if(is_logged()&&$this->session->userdata('tipoUsuario')==0) {
                     redirect('admin');
-        		}
+        		}*/
 
     }
 	function index() {
@@ -174,6 +175,60 @@ class Principal extends CI_Controller {
 	function meh(){
 		$this->load->view('meh_view');
 	}
+
+	function uploadBanner(){
+        $posicion = $this->input->post('posicion'); // '1 - superior 2 - centro - 3 abajo - 4 lateral'
+        $seccionID = $this->input->post('seccionID');; // inici, venta, perros perdidos, etc.
+        $zonaID = 1;
+        var_dump($_POST);
+        switch ($posicion) {
+            case 1:
+                 $alto = 93;
+                 $ancho = 638;
+                 $folder = 'banner_superior';
+            break;
+
+            case 2:
+                 $alto = 400;
+                 $ancho = 644;
+                 $folder = '';
+            break;
+
+            case 3:
+                 $alto = 93;
+                 $ancho = 638;
+                 $folder = 'banner_inferior';
+            break;
+
+            case 4:
+                 $alto = 190;
+                 $ancho = 215;
+                 $folder = 'banner_lateral';
+            break;
+            
+            
+        }
+
+        $file_data = array(
+                'date'=>false,
+                'random' => true,
+                'user_id' => null,
+                'width'=> $ancho,
+                'height' => $alto
+        );
+        var_dump($file_data);
+
+        $imagen = $this->file_model->uploadBanner($folder, $file_data, 'banner', true);
+            if (is_array($imagen)) {                // $data['response'] = 'false';
+                // $data['error'] = $imagen['error'];
+                //$this -> session -> set_flashdata('custom_error', $imagen['error']);
+                echo 'error';
+                var_dump($imagen);
+            }else{
+                echo 'correcto';
+                var_dump($imagen);
+            }
+    }
 	
 	
 }

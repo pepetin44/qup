@@ -158,5 +158,67 @@ class File_model extends CI_Model {
 		return true;
 	}
 
+	public function uploadBanner($target, $data = false, $file, $resize) {
+		/*
+		 * target = directorio
+		 * data = array ('
+		 * 			date'=>true||false,'random'=>true||false,
+		 * random => true||false
+		 * 		'user_id'=>session user id||null,
+		 * 		'width'=>600||null,
+		 * 		'height'=>400||null);
+		 * file = input que sube
+		 * resize = boolean
+		 * */
+
+		$ori_name = $this->nameForDoc($_FILES[$file]['name'],false,true);
+		$config['upload_path'] = 'images/' . $target;
+		$config['allowed_types'] = 'gif|jpg|png|jpeg|pdf|doc|docx';
+		// $config['allowed_types'] = '*';
+
+		// $config['encrypt_name'] = 'TRUE';
+		$config['max_size'] = '5120';
+		$config['max_width'] = '2048';
+		$config['max_height'] = '2048';
+
+		$config['file_name'] = $this->name($ori_name, $data['date'], $data['random'], $data['user_id']);
+		$this->upload->initialize($config);
+
+		if (!$this->upload->do_upload($file)) {
+			$error = $this->upload->display_errors();
+			$nombre = null;
+			$return = array();
+			$return['nombre'] = null;
+			$return['error'] = $error;
+			return $return;
+		} else {
+			$imgData = $this->upload->data();
+			if ($resize) {
+				$this->resizeBanner($imgData['file_name'], $data['width'], $data['height'], $target, $target);
+				// $preReturningName = explode('.', $imgData['file_name']);
+				$preReturningName = substr($imgData['file_name'], 0, (strlen($imgData['file_name'])-4));
+				$extension = substr($imgData['file_name'],(strlen($imgData['file_name'])-4),4);
+				return $preReturningName.'_thumb'.$extension;
+			} else {
+				return $imgData['file_name'];
+			}
+		}
+	}
+
+	private function resizeBanner($imgName, $width, $height, $source, $target) {
+		$this->load->library('image_lib');
+		$config['image_library'] = 'gd2';
+		$config['source_image'] = 'images/'.$target.'/' . $imgName;
+		$config['create_thumb'] = TRUE;
+		$config['maintain_ratio'] = FALSE; //TRUE; SI SE HABILITA TRUE LO HARA LO MEJOR POSIBLE REPETANDO LA PROPORCION
+		$config['width'] = $width;
+		$config['height'] = $height;
+
+		$this->image_lib->initialize($config);
+		if (!$this->image_lib->resize())
+			return false;	
+		return true;
+	}
+
 }
 ?>

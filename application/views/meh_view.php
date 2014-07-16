@@ -22,8 +22,16 @@ jQuery(document).ready(function(){
 <br />
 <br />
 
-<form id="formID" method="post" action="submit.action">
-    <input value="2010-12-01" class="validate[required,custom[date]]" type="text" name="date" id="date" />
+<form id="formID" method="post" action="<?=base_url()?>principal/uploadBanner" enctype="multipart/form-data">
+meh<br />
+<br />
+<br />
+
+posicion = <input type="text" name="posicion" /> <br />
+seccion = <input type="text" name="seccionID" /><br />
+file = <input type="file" name="banner" /><br />
+<br />
+<input type="submit" />
 </form>
 
 </body>
