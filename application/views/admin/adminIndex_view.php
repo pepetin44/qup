@@ -139,25 +139,25 @@ Pantallas
 <a href="#" id="RAZA DEL MES" name="8" class="seccion" onclick="return clickEd('rmonth')"> <img src="<?php echo base_url()?>images/ciculo.png" /> La raza del mes</a>
 </li>
 <li>
-<a href="#" id="EVENTO DEL MES" name="9" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Evento del mes</a>
+<a href="#" id="EVENTO DEL MES" name="9" class="seccion" onclick="return clickEd('eventmonth')" > <img src="<?php echo base_url()?>images/ciculo.png" /> Evento del mes</a>
 </li>
 <li>
-<a href="#" id="DATOS CURIOSOS" name="10" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Datos curiosos</a>
+<a href="#" id="DATOS CURIOSOS" name="10" class="seccion" onclick="return clickEd('datcur')" > <img src="<?php echo base_url()?>images/ciculo.png" /> Datos curiosos</a>
 </li>
 <li>
-<a href="#" id="ASOCIACIONES P." name="11" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Asociaciones Protectoras</a>
+<a href="#" id="ASOCIACIONES P." name="11" class="seccion" onclick="return clickEd('asc')"> <img src="<?php echo base_url()?>images/ciculo.png" /> Asociaciones Protectoras</a>
 </li>
 <li>
-<a href="#" id="¿QUIÉNES SOMOS?" name="12" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> ¿Quiénes somos?</a>
+<a href="#" id="¿QUIÉNES SOMOS?" name="12" class="seccion" onclick="return clickEd('whois')"> <img src="<?php echo base_url()?>images/ciculo.png" /> ¿Quiénes somos?</a>
 </li>
 <li>
-<a href="#" id="TUTORIAL" name="13" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Tutorial</a>
+<a href="#" id="TUTORIAL" name="13" class="seccion" onclick="return clickEd('tuto')"> <img src="<?php echo base_url()?>images/ciculo.png" /> Tutorial</a>
 </li>
 <li>
-<a href="#" id="PUBLICIDAD" name="14" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Publicidad</a>
+<a href="#" id="PUBLICIDAD" name="14" class="seccion" onclick="return clickEd('publi')"> <img src="<?php echo base_url()?>images/ciculo.png" /> Publicidad</a>
 </li>
 <li>
-<a href="#" id="PREGUNTAS F." name="15" class="seccion"> <img src="<?php echo base_url()?>images/ciculo.png" /> Preguntas frecuentes</a>
+<a href="#" id="PREGUNTAS F." name="15" class="seccion" onclick="return clickEd('faq')"> <img src="<?php echo base_url()?>images/ciculo.png" /> Preguntas frecuentes</a>
 </li>
 </ul>
 </li>
@@ -1840,6 +1840,1415 @@ En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.
 </tr>
 
 </table>
+
+<table id="eventmonth" style="display:none;" class="tabla_carrito" width="990">
+<tr>
+<th width="84">
+Nivel 1
+</th>
+<th width="81">
+Nivel 2
+</th>
+<th width="88">
+Nivel 3
+</th>
+<th width="137">
+Tipo
+</th>
+<th width="136">
+Ubicación
+</th>
+<th width="310">
+Contenido
+</th>
+<th width="122">
+Ajustes
+</th>
+</tr>
+<tr>
+<td bgcolor="#E6E7E8">
+BP00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Publicidad
+</td>
+<td bgcolor="#E6E7E8">
+Inicio-Superior
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones');"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr >
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/1.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/2.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00003
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/3.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr>
+<td bgcolor="#E6E7E8">
+BC00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Contenido
+</td>
+<td bgcolor="#E6E7E8">
+Inicio- Centro
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/900x500_1.jpg" width="122" height="74"/>
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones_texto');"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+Texto
+</td>
+<td>
+
+</td>
+<td>
+En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+</table>
+<table id="datcur" style="display:none;" class="tabla_carrito" width="990">
+<tr>
+<th width="84">
+Nivel 1
+</th>
+<th width="81">
+Nivel 2
+</th>
+<th width="88">
+Nivel 3
+</th>
+<th width="137">
+Tipo
+</th>
+<th width="136">
+Ubicación
+</th>
+<th width="310">
+Contenido
+</th>
+<th width="122">
+Ajustes
+</th>
+</tr>
+<tr>
+<td bgcolor="#E6E7E8">
+BP00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Publicidad
+</td>
+<td bgcolor="#E6E7E8">
+Inicio-Superior
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones');"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr >
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/1.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/2.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00003
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/3.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr>
+<td bgcolor="#E6E7E8">
+BC00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Contenido
+</td>
+<td bgcolor="#E6E7E8">
+Inicio- Centro
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/900x500_1.jpg" width="122" height="74"/>
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones_texto');"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+Texto
+</td>
+<td>
+
+</td>
+<td>
+En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+</table>
+<table id="asc" style="display:none;" class="tabla_carrito" width="990">
+<tr>
+<th width="84">
+Nivel 1
+</th>
+<th width="81">
+Nivel 2
+</th>
+<th width="88">
+Nivel 3
+</th>
+<th width="137">
+Tipo
+</th>
+<th width="136">
+Ubicación
+</th>
+<th width="310">
+Contenido
+</th>
+<th width="122">
+Ajustes
+</th>
+</tr>
+<tr>
+<td bgcolor="#E6E7E8">
+BP00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Publicidad
+</td>
+<td bgcolor="#E6E7E8">
+Inicio-Superior
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones');"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr >
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/1.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/2.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00003
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/3.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr>
+<td bgcolor="#E6E7E8">
+BC00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Contenido
+</td>
+<td bgcolor="#E6E7E8">
+Inicio- Centro
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/900x500_1.jpg" width="122" height="74"/>
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones_texto');"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+Texto
+</td>
+<td>
+
+</td>
+<td>
+En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+</table>
+<table id="whois" style="display:none;" class="tabla_carrito" width="990">
+<tr>
+<th width="84">
+Nivel 1
+</th>
+<th width="81">
+Nivel 2
+</th>
+<th width="88">
+Nivel 3
+</th>
+<th width="137">
+Tipo
+</th>
+<th width="136">
+Ubicación
+</th>
+<th width="310">
+Contenido
+</th>
+<th width="122">
+Ajustes
+</th>
+</tr>
+<tr>
+<td bgcolor="#E6E7E8">
+BP00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Publicidad
+</td>
+<td bgcolor="#E6E7E8">
+Inicio-Superior
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones');"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr >
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/1.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/2.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00003
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/3.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr>
+<td bgcolor="#E6E7E8">
+BC00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Contenido
+</td>
+<td bgcolor="#E6E7E8">
+Inicio- Centro
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/900x500_1.jpg" width="122" height="74"/>
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones_texto');"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+Texto
+</td>
+<td>
+
+</td>
+<td>
+En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+</table>
+
+<table id="tuto" style="display:none;" class="tabla_carrito" width="990">
+<tr>
+<th width="84">
+Nivel 1
+</th>
+<th width="81">
+Nivel 2
+</th>
+<th width="88">
+Nivel 3
+</th>
+<th width="137">
+Tipo
+</th>
+<th width="136">
+Ubicación
+</th>
+<th width="310">
+Contenido
+</th>
+<th width="122">
+Ajustes
+</th>
+</tr>
+<tr>
+<td bgcolor="#E6E7E8">
+BP00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Publicidad
+</td>
+<td bgcolor="#E6E7E8">
+Inicio-Superior
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones');"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr >
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/1.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/2.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00003
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/3.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr>
+<td bgcolor="#E6E7E8">
+BC00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Contenido
+</td>
+<td bgcolor="#E6E7E8">
+Inicio- Centro
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/900x500_1.jpg" width="122" height="74"/>
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones_texto');"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+Texto
+</td>
+<td>
+
+</td>
+<td>
+En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+</table>
+<table id="publi" style="display:none;" class="tabla_carrito" width="990">
+<tr>
+<th width="84">
+Nivel 1
+</th>
+<th width="81">
+Nivel 2
+</th>
+<th width="88">
+Nivel 3
+</th>
+<th width="137">
+Tipo
+</th>
+<th width="136">
+Ubicación
+</th>
+<th width="310">
+Contenido
+</th>
+<th width="122">
+Ajustes
+</th>
+</tr>
+<tr>
+<td bgcolor="#E6E7E8">
+BP00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Publicidad
+</td>
+<td bgcolor="#E6E7E8">
+Inicio-Superior
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones');"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr >
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/1.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/2.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00003
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/3.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr>
+<td bgcolor="#E6E7E8">
+BC00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Contenido
+</td>
+<td bgcolor="#E6E7E8">
+Inicio- Centro
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/900x500_1.jpg" width="122" height="74"/>
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones_texto');"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+Texto
+</td>
+<td>
+
+</td>
+<td>
+En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+</table>
+<table id="faq" style="display:none;" class="tabla_carrito" width="990">
+<tr>
+<th width="84">
+Nivel 1
+</th>
+<th width="81">
+Nivel 2
+</th>
+<th width="88">
+Nivel 3
+</th>
+<th width="137">
+Tipo
+</th>
+<th width="136">
+Ubicación
+</th>
+<th width="310">
+Contenido
+</th>
+<th width="122">
+Ajustes
+</th>
+</tr>
+<tr>
+<td bgcolor="#E6E7E8">
+BP00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Publicidad
+</td>
+<td bgcolor="#E6E7E8">
+Inicio-Superior
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones');"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr >
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/1.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/2.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00003
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/3.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<tr>
+<td bgcolor="#E6E7E8">
+BC00001
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+Banner Contenido
+</td>
+<td bgcolor="#E6E7E8">
+Inicio- Centro
+</td>
+<td bgcolor="#E6E7E8">
+
+</td>
+<td bgcolor="#E6E7E8">
+<img src="<?php echo base_url()?>images/agregar.png"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+00001
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/900x500_1.jpg" width="122" height="74"/>
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones_texto');"/>
+</td>
+
+</tr>
+
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+Texto
+</td>
+<td>
+
+</td>
+<td>
+En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
+
+</table>
 </div>
 <script type="text/javascript">
 function clickEd(param) {
@@ -1849,7 +3258,7 @@ function clickEd(param) {
         //$("#fade").hide();
         return false;
         }
-        var sectionList = ['inicio', 'venta','cruza','directorio','perfil','adopcion' ,'losted' ,'rmonth'];
+        var sectionList = ['inicio', 'venta','cruza','directorio','perfil','adopcion' ,'losted' ,'rmonth','eventmonth','datcur','asc','whois','tuto','publi','faq'];
 
 
         function hideAll() {
