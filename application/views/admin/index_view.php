@@ -92,6 +92,12 @@ Mensajes
 <li>
 <a href = "<?php echo base_url()?>admin/principal/getAdminP" style= "text-decoration:none;color:#FFF;">Anuncios</a>
 </li>
+
+<li>
+<a style="text-decoration:none;color:#FFF;"href="<?php echo base_url()?>admin/principal/AdminT"> 
+Tienda
+</a>
+</li>
 </ul>
 </div>
 

@@ -81,7 +81,11 @@ class Principal extends CI_Controller {
 
     }
 
-    
+    function AdminT(){
+        $this->load->view('admin/adminT_view');
+
+
+    }
         
 
     

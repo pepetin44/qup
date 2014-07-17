@@ -189,7 +189,16 @@ Mensajes
 <li>
 Anuncios
 </li>
+
+<li>
+<a style="text-decoration:none;color:#FFF;"href="<?php echo base_url()?>admin/principal/AdminT"> 
+Tienda
+</a>
+</li>
 </ul>
+
+
+
 </div>
 
 </div> <!-- fin wncabezado -->
