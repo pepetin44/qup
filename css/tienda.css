@@ -17,6 +17,8 @@ width:180px;
 	text-align:center;
 	border:2px solid #ECEDED;
 	}
+.contenedor_descripcion_precio_producto:hover{
+	background-color:#CCCCCC;}
 .nombre_producto{
 	font-size:15px;
 	color:#58585A;
@@ -37,6 +39,7 @@ width:180px;
    width: 100%;
    height: 1600px;
    background-image:url(../images/fondotabla.png);}
+   
    
 .crerar_detalle_anuncio{
 	width:664px;

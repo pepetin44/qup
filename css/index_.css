@@ -219,9 +219,11 @@ body{
 	float:left;
 	color:#58585A;
 	width:300;
-	margin-top:15px;
+	margin-top:18px;
 	font-family:"titulos";
-	font-size: 21px;}
+	font-size: 21px;
+	line-height:1em;
+	}
 .margen{
 	margin:5px;}
 .lateral_lite{
@@ -452,6 +454,8 @@ body{
 	color:#FFFFFF;
 	text-align:center;
 	font-family:'titulos';
+	line-height: 1em;
+    padding-top: 15px;
 	}
 .texto_inputs{
 	margin-top:15px;
@@ -461,7 +465,8 @@ body{
 	margin-left:15px;
 	}
 .contendeor_inputs{
-	width:200px;
+	width:400px;
+	text-align:left;
 	display: inline-block;
 	margin-top:15px;}
 .informacion_adicional_registro{
@@ -471,7 +476,7 @@ body{
 	color:#FFFFFF;}
 .asterisco{
 	font-size:14px;
-	margin-left:200px;}
+	margin-left:0px;}
 .llenar_info_adicional{
 	width:100%;
 	border-top:2px solid #FFF;
@@ -493,29 +498,29 @@ body{
 	display:inline-block;
 	margin-left:15px;
 }	
-      #map-canvas {
+      #map_canvas {
         height: 200px;
 		width:350px;
         margin: 0px;
-        padding: 0px
+        padding: 0px;
+		margin-left:170px !important;
       }
-	        #map-canvas_dos {
-        height: 200px;
-		width:350px;
+	        #map-canvas {
+        height: 200px !important;
+		width:350px !important;
+		margin-left:50px;
         margin: 0px;
         padding: 0px
       }
-	  
-	 .contenedor_total_registros{
-	 height:420px;
-	overflow:auto;
-	
-	 }
 .datos_faltantes_negocio{
 	
 	}	
 .datos_faltantes_asociacion{
 	
+	}
+.contenedor_total_datos{
+	height:420px;
+	overflow:auto;
 	}	
 .subrayado{
 	text-decoration:underline;
@@ -543,7 +548,7 @@ body{
 .pubicar_anuncio_mini{
 	margin-top:20px;
 	width:845px;
-	height:1100px;
+	min-height:1100px;
 	margin:0px auto;
 	overflow: auto;
 	overflow-y:hidden;-ms-overflow-y:hidden;
@@ -560,18 +565,20 @@ body{
 	height:68px;
 	float: right;
 	margin-right:5px;
+	margin-top:22px;
 	}
 .listado_numeros_anuncio_mini li{
-	list-style:none;
+    list-style:none;
 	float:left;
 	width:99px;
 	height:83px;
+	line-height:1em;
 	background-image:url(../images/num_publicacion.png);
 	background-repeat:no-repeat;
 	font-family:'titulos';
 	font-size:50px;
 	color:#762EA4;
-	padding-top:11px;
+	padding-top:21px;
 	padding-left:28px;
 	}
 .numero_seccion_mini{
@@ -589,13 +596,14 @@ body{
 	}
 .descipcion_pasos_mini{
 	width:840px;
-	height:480px;
+	height:500px;
 	background-color: #FFF;
 	border:2px solid #762EA4;
-	margin-top:70px;}
+	margin-top:70px;
+	}
 .descipcion_pasos_largo_mini{
 	width:840px;
-	height:960px;
+	min-height:960px;
 	background-color: #FFF;
 	border:2px solid #762EA4;
 	margin-top:70px;}
@@ -606,12 +614,14 @@ body{
 	border:2px solid #762EA4;
 	margin-top:70px;}
 .titulo_de_pasos_mini{
-	width:840;
+    width:840;
 	height:110px;
 	font-family:'titulos';
 	font-size:63px;
 	color:#762EA4;
-	text-align:center;}
+	text-align:center;
+	line-height: 1em;
+    padding-top: 21px;}
 .instrucciones_pasos_mini{
 	width:830px;
 	height:44px;
@@ -692,7 +702,7 @@ body{
 .morado_15_sinmargen_mini{
 	float:left;}
 	.morado_15_sinmargen_mini li{
-		float:left;
+	float:left;
 	margin-left:15px;
 	margin-top:15px;
 	font-size:18px;
@@ -789,10 +799,11 @@ body{
 	float:right;}
 	
 .title_paquetes_titilos_mini{
-	float:left;
+    float:left;
 	color:#58585A;
 	width:300;
-	margin-top:5px;
+	line-height: 1em;
+    margin-top: 10px;
 	font-family:"titulos";
 	font-size: 15px;}
 .margen_mini{
@@ -884,6 +895,8 @@ body{
 	}
 .margen_15_left_mini{
 	margin-left:15px;}
+.margen_10_left_mini{
+	margin-left:10px;}
 .background_morado_35_mini{
 	color:#FFFFFF;
 	margin-right:35px;
@@ -940,7 +953,8 @@ body{
 	font-family:'titulos';
 	font-size:21px;
 	color:#762EA4;
-	margin-left:20px;}
+	margin-left:20px;
+	line-height:1em;}
 	
 .divisor_morado_mini{
 	width:2px;
@@ -961,31 +975,25 @@ body{
 .contenedor_morado_mini{
 	width:300px; 
 	height:100px; 
-	position: relative; 
-	float:right;
-	width:300px; 
-	height:100px; 
-	position: relative; 
-	float:right;
+	position: relative;
+	margin-left:520px;
 	}
 .contenedor_galeria_mini{
 	width:394px;
 	height:243px;
-	float:left;
+	display:inline-block;
 	}
 	
 .datos_general_mini{
-	width:252px;
-	height:243px;
-	float:left;
-	margin-left:10px;
-	font-size:13px;
+    width: 249px;
+    height: 243px;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 13px;
 	}
 .contenedor_del_detalle_mini{
-	position:relative;
-	width:655px;
-	height:376px;
-	margin-top:233px;
+	width: 655px;
+    min-height: 376px;
 	}
 #nav_anuncio { 
 float:right; 
@@ -1023,6 +1031,7 @@ border: none;
 	font-size:19px;
 	color:#FF7C00;
 	margin-left:5px;
+	line-height:1em;
 	}
 	.leer_anuncio_mini{
 	width:657px;
@@ -1188,3 +1197,36 @@ border: none;
 	padding-bottom:10px;
 	}
    
+#registerNow label.error {
+	margin-left: 170px;
+	margin-top:-35px;
+	min-width:200px;
+	width: auto;
+	display:inline-block;
+	float:left;
+	background-color:#CC0000;
+	padding:5px;
+	border-radius:5px;
+	margin-bottom:10px;
+	color:#FFFFFF;
+	z-index:10;
+	font-size:12px;
+}
+.el_submit{
+	width:120px; 
+	height:35px; 
+	z-index:-1; 
+	background: transparent; 
+	border:none; 
+	color:#FFFFFF; 
+	margin-top:-5px;
+	font-family:'miFuente';
+	font-size:16px;
+	}
+.el_submit:hover{
+	color:#762EA4;
+	cursor:pointer;}
+.los_inputs_registro{
+	min-width:153px; 
+	height:20px;
+	}

@@ -4,7 +4,7 @@ if (!defined('BASEPATH'))
 
 class Cuenta extends CI_Controller {
     
-    var $idCandidato="";
+  
     var $idUsuario="";
 
         public function __construct(){
@@ -18,6 +18,8 @@ class Cuenta extends CI_Controller {
         $this->load->model('defaultdata_model');
         $this->load->helper(array('form', 'url'));
         $this->load->library('googlemaps');
+        $this->load->library('cart');
+        
 
         if (!is_authorized(array(1), 1, $this->session->userdata('nivel'), $this->session->userdata('rol'))) {
                 $this->session->set_flashdata('error', 'userNotAutorized');
@@ -110,7 +112,46 @@ class Cuenta extends CI_Controller {
         $this->load->view('usuario/indexActivado_view', $data);
     }
 
+    function carrito(){
+        var_dump($_POST);
+        
+       $data = array(
+            'id' => $this->input->post('productoID'),
+            'qty' => 4,//$this->input->post(),
+            'price' => $this->input->post('precio'),
+            'name' => 'Shampoo', //$this->input->post(),
+            'options' => array('Size' => $this->input->post('talle'), 'Color' => $this->input->post('color'))
+         );
 
+
+        $rowID = $this->cart->insert($data);
+
+        var_dump($rowID);
+    }
+
+    function carritoDetalle() {
+        $this->load->view('carrito_view');
+    }
+
+    function carritoUpdate(){
+        $data = array(
+            'rowid' => $this->input->post('rowID'),
+            'qty' => $this->input->post('qty')
+        );
+        $e = $this->cart->update($data);
+        $data['e'] = $e;
+        $data['response'] = "true";
+        echo json_encode($data);
+    }
+
+    function carritoDetalleTest() {
+        $this->load->view('carritoTest_view');
+    }
+
+    function carritoBae(){
+        $e = $this->cart->destroy();
+        var_dump($e);
+    }
    
 
 }

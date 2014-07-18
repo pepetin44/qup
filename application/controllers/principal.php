@@ -230,5 +230,10 @@ class Principal extends CI_Controller {
             }
     }
 	
+	function tienda(){
+		$data['catalogo'] = $this->defaultdata_model->getTable('catalogoproductos');
+		$this->load->view('tienda_view',$data);
+		var_dump($data);
+	}
 	
 }

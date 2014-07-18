@@ -1,6 +1,7 @@
 .contenedor_central{
 	float: left;
 	width:795px;
+	margin-top:-15px;
 }
 .titulo_seccion{
 	font-size:60px;
@@ -9,8 +10,9 @@
 	max-width:990px;
 	font-family:"titulos";
 	color:#7EA715;
-	margin-top:5px;
-	height:70px;
+	margin-top: 10px;
+    height: 60px;
+    line-height: 1em;
 
 	}
 .buscador{
@@ -34,7 +36,7 @@
 	background-repeat:no-repeat;
 	float:left;
 	margin-left:25px;
-	padding-bottom:15px;
+	padding-top:5px;
 	}
 	
 .estilo_select{
@@ -49,6 +51,7 @@
 	color:#FFFFFF;
 	padding-left:5px;
 	outline: none;
+	line-height:1em;
 	}
 
 
@@ -128,6 +131,9 @@
 	float:left;
 	margin-left:25px;
 	vertical-align:middle;
+	line-height: 1em;
+    padding-top: 3px;
+    background-repeat: no-repeat;
 	}
 .buscar{
 	background: transparent;
@@ -168,21 +174,19 @@
 .contenedor_galeria{
 	width:394px;
 	height:243px;
-	float:left;
+	display:inline-block;
 	}
 	
 .datos_general{
-	width:252px;
+	width:249px;
 	height:243px;
-	float:left;
+	display:inline-block;
 	margin-left:10px;
 	font-size:13px;
 	}
 .contenedor_del_detalle{
-	position:relative;
-	width:655px;
-	height:376px;
-	margin-top:233px;
+    width:655px;
+	min-height:376px;
 	}
 .contenedor_cerrar_anuncio{
 	width:667px;
@@ -257,6 +261,7 @@ border: none;
 	font-size:19px;
 	color:#FF7C00;
 	margin-left:5px;
+	line-height:1em;
 	}
 	
 	
@@ -472,13 +477,15 @@ border: none;
    z-index:150;
    padding-top:40px;}
 .pubicar_anuncio{
-	margin-top:20px;
-	width:845px;
-	height:1100px;
-	margin:0px auto;
-	overflow: auto;
-	overflow-y:hidden;-ms-overflow-y:hidden;
-	overflow-X:hidden;-ms-overflow-X:hidden;
+   margin-top: 20px;
+   width: 845px;
+   min-height: 1100px;
+   margin: 0px auto;
+   overflow: auto;
+   overflow-y: hidden;
+   -ms-overflow-y: hidden;
+   overflow-X: hidden;
+   -ms-overflow-X: hidden;
 	}
 .numeros_publicar_anuncio{
 	width:740px;
@@ -491,18 +498,20 @@ border: none;
 	height:68px;
 	float: right;
 	margin-right:5px;
+	margin-top:17px;
 	}
 .listado_numeros_anuncio li{
 	list-style:none;
 	float:left;
 	width:99px;
 	height:83px;
+	line-height:1em;
 	background-image:url(../images/num_publicacion.png);
 	background-repeat:no-repeat;
 	font-family:'titulos';
 	font-size:50px;
 	color:#762EA4;
-	padding-top:11px;
+	padding-top:21px;
 	padding-left:28px;
 	}
 .numero_seccion{
@@ -520,16 +529,16 @@ border: none;
 	}
 .descipcion_pasos{
 	width:840px;
-	height:480px;
+	height:500px;
 	background-color: #FFF;
 	border:2px solid #762EA4;
 	margin-top:70px;}
 .descipcion_pasos_largo{
-	width:840px;
-	height:960px;
-	background-color: #FFF;
-	border:2px solid #762EA4;
-	margin-top:70px;}
+	width: 840px;
+    min-height: 960px;
+    background-color: #FFF;
+    border: 2px solid #762EA4;
+    margin-top: 70px;}
 .descipcion_pasos_mediano{
 	width:840px;
 	height:650px;
@@ -542,7 +551,10 @@ border: none;
 	font-family:'titulos';
 	font-size:63px;
 	color:#762EA4;
-	text-align:center;}
+	text-align:center;
+	line-height: 1em;
+    padding-top: 21px;
+	}
 .instrucciones_pasos{
 	width:830px;
 	height:44px;
@@ -723,7 +735,8 @@ border: none;
 	float:left;
 	color:#58585A;
 	width:300;
-	margin-top:5px;
+	line-height: 1em;
+    margin-top: 10px;
 	font-family:"titulos";
 	font-size: 15px;}
 .margen{
@@ -871,7 +884,8 @@ border: none;
 	font-family:'titulos';
 	font-size:21px;
 	color:#762EA4;
-	margin-left:20px;}
+	margin-left:20px;
+	line-height:1em;}
 	
 .divisor_morado{
 	width:2px;
@@ -890,14 +904,10 @@ border: none;
 	font-size:13px;
 	color:#762EA4;}
 .contenedor_morado{
-	width:300px; 
-	height:100px; 
-	position: relative; 
-	float:right;
-	width:300px; 
-	height:100px; 
-	position: relative; 
-	float:right;
+	width: 300px;
+    height: 100px;
+    position: relative;
+    margin-left: 520px;
 	}
 .boton_palabras_clave{
 	float:left; 

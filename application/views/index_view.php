@@ -1362,7 +1362,7 @@ Cruza
 Adopción
 </li>
 <li>
-Tienda
+<a href="<?=base_url()?>principal/tienda">Tienda</a>
 </li>
 <li>
 Directorio
@@ -1433,7 +1433,7 @@ Cruza
 Adopción
 </li>
 <li>
-<a href="<?php echo base_url()?>tienda.html">Tienda</a>
+<a href="<?=base_url()?>principal/tienda">Tienda</a>
 </li>
 <li>
 Directorio
@@ -1452,7 +1452,7 @@ Directorio
 
 <div id="espacio_izquierda" class="seccion_izquierda">
 <ul class="iconos" id="iconos_grandes">
-<li onclick="window.location='carrito.html';"> <img src="<?php echo base_url()?>images/compras.png"/></li>
+<li onclick="window.location='<?=base_url()?>usuario/cuenta/carritoDetalle';"> <img src="<?php echo base_url()?>images/compras.png"/></li>
 <li onclick="muestra('contenedor_login');"><img src="<?php echo base_url()?>images/sesion.png"/></li>
 <li onclick="muestra('contenedor_registro');">
 <img src="<?php echo base_url()?>images/registrate.png"/>

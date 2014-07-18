@@ -54,6 +54,10 @@ class Defaultdata_model extends CI_Model {
         $query = $this -> db -> get($this -> tablas['publicaciones']);
         return $query -> result();
     }
+
+    function getTable($tabla) {
+        return $this -> db -> get($this -> tablas[$tabla]) -> result();
+    }
 	
 
 }

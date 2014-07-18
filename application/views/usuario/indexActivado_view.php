@@ -6,27 +6,21 @@
 <link rel="shortcut icon" href="<?php echo base_url()?>images/ico.ico" />
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/reset.css" media="screen"></link>
 
-<link rel="stylesheet" href="<?php echo base_url()?>css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url()?>css/nivo-slider.css" type="text/css" media="screen" /> 
 <link rel="stylesheet" href="<?php echo base_url()?>css/responsiveslides.css">
-<link href="<?php echo base_url()?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
+ <link href="<?php echo base_url()?>css/bootstrap.min.css" rel="stylesheet" type="text/css">
+ 
+ <link rel="stylesheet" href="<?php echo base_url()?>css/validator/validationEngine.jquery.css" type="text/css"/>
 
- <!-- JQUERY VALIDATOR STYLE -->
-         <link rel="stylesheet" href="<?php echo base_url()?>css/validator/validationEngine.jquery.css" type="text/css">
-         <link rel="stylesheet" href="<?php echo base_url()?>css/jqueryUI.css" type="text/css">
- <!-- ENDS JQUERY VALIDATOR STYLE -->
-
-  <!-- JQUERY VALIDATOR -->
-        <script src="<?php echo base_url()?>js/jquery.js" type="text/javascript"></script>
-        <script src="<?php echo base_url()?>js/jqueryUI.js" type="text/javascript"></script>
-        <script src="<?php echo base_url()?>js/validator/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
-        <!-- LANGUAGE -->
-        <script type="text/javascript" src="<?php echo base_url()?>js/validator/languages/jquery.validationEngine-es.js"></script>
-  <!-- ENDS JQUERY VALIDATOR -->
-
-
-<script src="<?php echo base_url()?>js/jquery-latest.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/validator/languages/jquery.validationEngine-es.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>js/validator/jquery.validationEngine.js"></script>
+ 
+ 
+<!--<script src="<?php echo base_url()?>js/jquery-latest.js" type="text/javascript"></script>-->
 <script src="<?php echo base_url()?>js/funciones_.js" type="text/javascript"></script>
-<script src="<?php echo base_url()?>js/funciones_index.js" type="text/javascript"></script>
+
+
 <script>
 if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
 
@@ -42,161 +36,47 @@ if  (navigator.appName=="Microsoft Internet Explorer") {
   <![endif]-->
 
  <!-- <script src="<?php echo base_url()?>js/jquery_1.4.js" type="text/javascript"></script>-->
- <script src="<?php echo base_url()?>js/jquery-1.10.2.js"></script>
+<!-- <script src="<?php echo base_url()?>js/jquery-1.10.2.js"></script>
+ <script src="<?php echo base_url()?>js/jquery.validate.js" type="text/javascript"></script>-->
+ <script src="<?php echo base_url()?>js/funciones_index.js" type="text/javascript"></script>
 <script src="<?php echo base_url()?>js/jquery.nivo.slider.js" type="text/javascript"></script>
  <script src="<?php echo base_url()?>js/responsiveslides.min.js"></script>
    <script src="<?php echo base_url()?>js/jquery-ui.js"></script>
-
  <!-- include jQuery library -->
 
 <!-- include Cycle plugin -->
-<script type="text/javascript" src="<?php echo base_url()?>js/jquery.cycle.all.js"></script> 
+<script type="text/javascript" src="<?php echo base_url()?>js/jquery.cycle.all.js"></script>  
 
-  <script type="text/javascript">
-    function updateDatabase(newLat, newLng){
-      // make an ajax request to a PHP file
-      // on our site that will update the database
-      // pass in our lat/lng as parameters
-      $("#newLat").val(newLat);
-      $("#newLng").val(newLng);
-      console.log(newLat,newLng);
-    }
+<script>
 
-  </script>
- <?php if (is_logged()) {?>
-<script type="text/javascript">  
-$(document).ready(function(){
-	$('<label>Tu cuenta ha sido activada exitosamente. Ahora puedes anunciarte y publicar anuncios, solo debes registrar tu información completa. Esto lo podrás hacer en cualquier momento entrando a tu perfil.</label>').appendTo('#confirm');
-                                muestra('contenedor_correcto'); 
 
-});
-</script>
-<?php } ?>
-<body>
-
-<script type="text/javascript">        
-            jQuery(document).ready(function($) {                
-                <?php if(isset($errorActivo) && isset($mensaje)): ?>
-                        $('<label>Usuario Activado.</label>').appendTo('#specificError');
-                        muestra('contenedor_error');
-                        oculta('contenedor_registro');
-                <?php endif; ?>
-                <?php if(isset($errorActivo2) && isset($mensaje)): ?>
-                        $('<label>Lamentablemente, el código de confirmación que intentas activar no existe.</label>').appendTo('#specificError');
-                        muestra('contenedor_error');
-                        oculta('contenedor_registro');
-                <?php endif; ?>
-				
+function ajaxValidationCallback(status, form, json, options){
+  if (status === true) {
         
-            });
-          </script>
-
-
-
-
-
-
-
-
-
-
-
-<!--		CONTENEDOR LOGIN							-->
-<!-- ------------------------------------------------------ -->
-<form action="<?=base_url()?>sesion/login/principal/principal" id="login" method="post">
-<div class="contenedor_login" id="contenedor_login" style="display:none;">
-<div class="cerrar_registro"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_login');"/> </div>
-
-<div class="registro_normal">
-<div class="titulo_registro"> INGRESAR </div>
-<div class="texto_inputs" >
-<p> Usuario:</p>
-
-<p style="margin-top:15px;">Contraseña:</p>
-
-</div>
-
-<div class="contendeor_inputs" >
-<p><input type="text" name="usuario"/> *</p>
-<p><input type="password" name="Contraseña"/> *</p>
-</div>
-</br>
-<ul class="morado_reg">
-<li>
-Entrar
-</li>
-</ul>
-
-
-<div class="subrayado" onclick="muestra('envio_con');">¿Olvidaste contraseña?</div>
-<div id="envio_con" class="envio_con"> 
-Se ha enviado contraseña al correo electronico indicado
-</div>
-<div class="subrayado" onclick="muestra('contenedor_registro');oculta('contenedor_login');"> Crear cuenta </div>
-</br>
-
-</div>
-
-</div>
-</form>
-<!-- ------------------------------------------------------ -->
-<!--		FIN    CONTENEDOR LOGIN							-->
-
-<!-------------------------------------------------- -->
-<script type="text/javascript">  
-$(document).ready(function(){   
-  
-
-
-  /* $( "input" ).on( "click", function() {
-    var user =  $( "input:checked" ).val();
-    console.log(user);
-    if(user == 2){
-       
-       $('#map-canvas').show();
-    }
-    if (user == 3){
-       
-       $('#map-canvas').show();
-    }
-    });*/
-     
-    
-
-
-    $("#suscribir").click(
-      
-        function(){
-
-
-
-
-          console.log('clic');
-          $.ajax({
-                url:'<?php echo base_url()?>registro/registrar',
-                type:'POST',
-                dataType: 'json',
-                data: $("#registerNow").serialize(),
-                success: function(data){
-                  console.log(data.response);
-                    if(data.response == true){
-                               $('<label>Tu usuario ha sido creado exitosamente, por favor activa tu cuenta atravez del e-mail que ha sido enviado a tu cuenta de correo electronico. Para poder anunciarte y publicar anuncios, deberás registrar tu información completa. Esto lo podrás hacer en cualquier momento entrando a tu perfil.</label>').appendTo('#confirm');
+        var data = json;
+        console.log(data.response);
+        if(data.response == true){
+                               
+                              $("#confirm").prepend('<label>Tu usuario ha sido creado exitosamente, por favor activa tu cuenta atravez del e-mail que ha sido enviado a tu cuenta de correo electronico. Para poder anunciarte y publicar anuncios, deberás registrar tu información completa. Esto lo podrás hacer en cualquier momento entrando a tu perfil.</label>');
                                 muestra('contenedor_correcto'); 
                                 oculta('contenedor_registro');                                                                            
           
-                    }else{
-                        $('<label>Intentalo nuevamente.</label>').appendTo('#specificError');
-                        muestra('contenedor_error');
-                        oculta('contenedor_registro'); 
-                    }
-                }
-    });
+        }                                                                          
+  }
+}
 
+jQuery(document).ready(function(){
+      // binds form submission and fields to the validation engine
+      jQuery("#registerNow").validationEngine({
+        promptPosition           : "topRight",
+        scroll                   : false,
+        ajaxFormValidation       : true,
+        ajaxFormValidationMethod : 'post',
+        onAjaxFormComplete       : ajaxValidationCallback
+      });
 
-});  
-
-    }); 
-
+     
+});
 
 function showMap(){
   var user =  $( "input:checked" ).val();
@@ -216,22 +96,115 @@ function hideMap(){
 
 }
 
+    function updateDatabase(newLat, newLng){
+      // make an ajax request to a PHP file
+      // on our site that will update the database
+      // pass in our lat/lng as parameters
+      $("#newLat").val(newLat);
+      $("#newLng").val(newLng);
+      console.log(newLat,newLng);
+    }
+
+
+     
+
 
 
 </script>
 
+</head>
+<body>
+<?php if (is_logged()) {?>
+<script type="text/javascript">  
+$(document).ready(function(){
+  $('<label>Tu cuenta ha sido activada exitosamente. Ahora puedes anunciarte y publicar anuncios, solo debes registrar tu información completa. Esto lo podrás hacer en cualquier momento entrando a tu perfil.</label>').appendTo('#confirm');
+                                muestra('contenedor_correcto'); 
+
+});
+</script>
+<?php } ?>
+<script type="text/javascript">        
+            jQuery(document).ready(function($) {                
+                <?php if(isset($errorActivo) && isset($mensaje)): ?>
+                        $('<label>Usuario Activado.</label>').appendTo('#specificError');
+                        muestra('contenedor_error');
+                        oculta('contenedor_registro');
+                <?php endif; ?>
+                <?php if(isset($errorActivo2) && isset($mensaje)): ?>
+                        $('<label>Lamentablemente, el código de confirmación que intentas activar no existe.</label>').appendTo('#specificError');
+                        muestra('contenedor_error');
+                        oculta('contenedor_registro');
+                <?php endif; ?>
+
+                $( "input" ).on( "click", function() {
+               var user =  $( "input:checked" ).val();
+               console.log(user);
+              if(user == 2){
+       
+                $('#map-canvas').show();
+              }
+              if (user == 3){
+       
+              $('#map-canvas').show();
+              }
+              });
+
+       
+            });
+          </script>
 
 
-
-<!-- ---------------------------------------------- -->
-
-
-
-
-
-<!--		CONTENEDOR REGISTRO							-->
+<!--    CONTENEDOR LOGIN              -->
 <!-- ------------------------------------------------------ -->
-<form action="<?php echo base_url()?>registro/registrar" id="registerNow" method="post"autocomplete="off" enctype="multipart/form-data">
+<form action="<?=base_url()?>sesion/login/principal/principal" id="login" method="post">
+<div class="contenedor_login" id="contenedor_login" style="display:none;">
+<div class="cerrar_registro"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_login');"/> </div>
+
+<div class="registro_normal">
+<div class="titulo_registro"> INGRESAR </div>
+<div class="texto_inputs" >
+<p> Usuario:</p>
+
+<p style="margin-top:15px;">Contraseña:</p>
+
+</div>
+
+<div class="contendeor_inputs" >
+<p><input type="text" name="correo"/> *</p>
+<p><input type="password" name="contrasena"/> *</p>
+</div>
+</br>
+<ul class="morado_reg">
+<li>
+<input type="submit" />
+</li>
+</ul>
+
+
+<div class="subrayado" onclick="muestra('envio_con');">¿Olvidaste contraseña?</div>
+<div id="envio_con" class="envio_con"> 
+Se ha enviado contraseña al correo electronico indicado
+</div>
+<div class="subrayado" onclick="muestra('contenedor_registro');oculta('contenedor_login');"> Crear cuenta </div>
+</br>
+
+</div>
+
+</div>
+</form>
+<!-- ------------------------------------------------------ -->
+<!--    FIN    CONTENEDOR LOGIN             -->
+
+
+
+
+
+
+
+
+<!--    CONTENEDOR REGISTRO             -->
+<!-- ------------------------------------------------------ -->
+<form action="<?php echo base_url()?>registro/registrar" id="registerNow" method="get" autocomplete="off" enctype="multipart/form-data">
 <div class="contenedor_registro" id="contenedor_registro" style="display:none;"> <!-- Contenedor negro reistro-->
 <div class="cerrar_registro"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_registro');"/> </div>
 
@@ -258,13 +231,13 @@ function hideMap(){
 <p><input type="text" name="nombre" id="nombre" class="validate[required]"/> *</p>
 <p><input type="text" name="apellido" id="apellido" class="validate[required]"/> *</p>
 
-<p><input type="text" name="correo" /> *</p>
+<p><input type="text" name="correo" class="validate[required,custom[email],ajax[isthereemail]]" /> *</p>
 
-<p><input type="text" name="telefono"/></p>
+<p><input type="text" name="telefono" class="validate[custom[integer]]"/></p>
 
-<p><input type="password" name="contrasena"/> *</p>
+<p><input type="password" name="contrasena"  id="contrasena1" class="validate[required]"/> *</p>
 </br>
-<p><input type="password" name="confirmar"/> *</p>
+<p><input type="password" name="confirmar"  id="contrasena2" class="validate[required,equals[contrasena1]]"/> *</p>
 
 
 </div>
@@ -280,7 +253,7 @@ function hideMap(){
 <p><input name="recibirCorreo" type="checkbox" value="1" /> <label> Quiero recibir información acerca de promociones </label></p>
 
 
-<p><input name="terminosCondiciones" type="checkbox" value="1" /> <label> He leído y acepto los <a href="<?php echo base_url()?>#" class="link_blanco">Términos y Condiciones</a> y <a href="<?php echo base_url()?>#" class="link_blanco">la Política de Privacidad</a> </label></p>
+<p><input name="terminosCondiciones" type="checkbox" value="1" class="validate[required]"/> <label> He leído y acepto los <a href="<?php echo base_url()?>#" class="link_blanco">Términos y Condiciones</a> y <a href="<?php echo base_url()?>#" class="link_blanco">la Política de Privacidad</a> </label></p>
 
 
 <font class="asterisco">Los datos marcados con un astrisco (*) son obligatorios </font>
@@ -329,9 +302,10 @@ function hideMap(){
 <p><input type="text" name="cp"/> </p>
 
 <p><input type="text" name="municipio"/> </p>
-<p><select name="estado"/>
+<p><select name="estado" id="estado">
      <option> --- </option>
   <?php 
+  var_dump($estados);
     if($estados != null):
       foreach ($estados as $edo):
   ?>
@@ -340,7 +314,7 @@ function hideMap(){
     <?php endforeach;
     endif; ?>
    </select></p>
-<p><select name="pais"/> 
+<p><select name="pais"> 
       <option value="147">México</option>
   <?php 
     if($paises != null):
@@ -397,7 +371,7 @@ function hideMap(){
 <p><input type="text" name="cpN"/> </p>
 
 <p><input type="text" name="municipioN"/> </p>
-<p><select name="estadoN"/>
+<p><select name="estadoN">
      <option> --- </option>
   <?php 
     if($estados != null):
@@ -408,7 +382,7 @@ function hideMap(){
     <?php endforeach;
     endif; ?>
    </select></p>
-<p><select name="paisN"/> 
+<p><select name="paisN"> 
       <option value="147">México</option>
   <?php 
     if($paises != null):
@@ -543,7 +517,7 @@ Nombre:
 <p><input style="margin-top:3px;" type="text" name="correoN1"/> </p>
 <p><input style="margin-top:3px;" type="text" name="pagina_webN1"/> </p>
 <p><input style="margin-top:3px;" type="file" name="logoN1" id="logoN1"/> </p>
-<p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionN1"/> </textarea> </p>
+<p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionN1"> </textarea> </p>
 
 
  
@@ -667,7 +641,7 @@ Nombre:
 <p><input style="margin-top:3px;" type="text" name="correoA1C"/> </p>
 <p><input style="margin-top:3px;" type="text" name="pagina_webAC1"/> </p>
 <p><input style="margin-top:3px;" type="file" name="logoAC1" id="logoAC1"/> </p>
-<p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionAC1"/> </textarea> </p>
+<p><textarea rows="3" cols="40" style="margin-top:3px;" name="descripcionAC1"> </textarea> </p>
 
   
    
@@ -684,9 +658,12 @@ Nombre:
  
  </div>  
 
+<input type="hidden" name="newLat" id="newLat" value="" />
+<input type="hidden" name="newLng" id="newLng" value="" />
+
 </br>
 <ul class="morado_reg">
-<li><a href="#" id="suscribir" style="text-decoration:none; color:#FFF;">Suscribirse</a></li>
+<li><!--<a href="#" id="suscribir" style="text-decoration:none; color:#FFF;">Suscribirse</a>--><input type="submit" value="Suscribir" class="el_submit"/></li>
 </ul>
 
 
@@ -695,13 +672,13 @@ Nombre:
 </div> <!-- Fin contenedor negro registro -->
 
 </form>
-<!--		FIN CONTENEDOR REGISTRO							-->
+<!--    FIN CONTENEDOR REGISTRO             -->
 <!-- ------------------------------------------------------ -->
 
 
 
 
-<!--		EXITO REGISTRO							-->
+<!--    EXITO REGISTRO              -->
 <!-- ------------------------------------------------------ -->
 <div class="contenedor_registro" id="contenedor_correcto" style="display:none;"> <!-- Contenedor negro reistro-->
 <div class="cerrar_registro"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_correcto');"/> </div>
@@ -718,21 +695,20 @@ Nombre:
 </br></br>
 <div> Bienvenido </div>
 <div id="confirm">
-
 </div>
+
  </div>
 </div>
 </br>
 
-</div>
 
 </div>
 
-<!--		FIN CONTENEDOR REGISTRO							-->
+<!--    FIN EXITO REGISTRO            -->
 <!-- ------------------------------------------------------ -->
 
 
-<!--		ERROR REGISTRO							-->
+<!--    ERROR REGISTRO              -->
 <!-- ------------------------------------------------------ -->
 
 <div class="contenedor_registro" id="contenedor_error" style="display:none;"> <!-- Contenedor negro reistro-->
@@ -759,7 +735,7 @@ Nombre:
 
 </div>
 
-<!--		FIN ERROR REGISTRO							-->
+<!--    FIN ERROR REGISTRO              -->
 <!-- ------------------------------------------------------ -->
 
 
@@ -1394,7 +1370,7 @@ Cruza
 Adopción
 </li>
 <li>
-Tienda
+<a href="<?=base_url()?>principal/tienda">Tienda</a>
 </li>
 <li>
 Directorio
@@ -1442,7 +1418,7 @@ Directorio
 <img src="<?php echo base_url()?>images/banner_superior/1.png" width="638" height="93"/>
 <img src="<?php echo base_url()?>images/banner_superior/2.png" width="638" height="93"/>
 <img src="<?php echo base_url()?>images/banner_superior/3.png" width="638" height="93"/>
-	</div>
+  </div>
 
 </br>
 
@@ -1465,7 +1441,7 @@ Cruza
 Adopción
 </li>
 <li>
-<a href="<?php echo base_url()?>tienda.html">Tienda</a>
+<a href="<?=base_url()?>principal/tienda">Tienda</a>
 </li>
 <li>
 Directorio
@@ -1869,7 +1845,7 @@ Copyright © 2014 QuieroUnPerro.com
   <script>
     $('#artCarousel').carousel({
       interval: 4000,
-	  effect:'random',
+    effect:'random',
       cycle: true
     });
   </script>

@@ -13,39 +13,11 @@
 <script type="text/javascript" src="<?php echo base_url()?>js/jquery-1.8.2.min.js"></script>
 <script>
 jQuery(document).ready(function(){
-	
-	var seccion = 1;
-	var zona = 9;
-	$(".row").hide();
-	$(".zona"+zona+seccion).show();
-	if(seccion == 1){
-				 $(".superior").fadeIn();
-				 $(".medio").fadeIn();
-				 $(".medioContenido").fadeOut();
-				 $(".inferior").fadeIn();
-			 } else if(seccion == 8 || seccion == 9 || seccion == 10) {
-				 $(".superior").fadeIn();
-				 $(".medio").fadeOut();
-				 $(".medioContenido").fadeIn();
-				 $("#seleccionAticulo").fadeIn();
-				 $("#seleccionApoyo").fadeOut();
-				 $(".imagenApoyo").fadeIn();
-				 $(".inferior").fadeIn();
-			 } else {			 
-				 $(".superior").fadeIn();
-				 $(".medio").fadeOut();
-				 $(".medioContenido").fadeIn();
-				 $("#seleccionAticulo").fadeOut();
-				 $("#seleccionApoyo").fadeIn();
-				 $(".inferior").fadeIn();
-		 }
-	var numeroSeccion = 0;
-	var numeroZona = 0;
+
 	 $(".seccion").click(function() {
-		 	 
              var seccionNombre = $(this).attr('id');
              var seccion = $(this).attr('name');
-             numeroSeccion = $("#numeroSeccionR").val(seccion);
+             var uno = $("#numeroSeccionR").val(seccion);
              var dos = $("#nombreSeccionR").val(seccionNombre);
              $("#seccion").detach();
              $('<label id="seccion">'+seccionNombre+'</label>').appendTo('#nombreSeccion');
@@ -59,26 +31,17 @@ jQuery(document).ready(function(){
 				 $(".superior").fadeIn();
 				 $(".medio").fadeOut();
 				 $(".medioContenido").fadeIn();
-				 $("#seleccionAticulo").fadeIn();
-				 $("#seleccionApoyo").fadeOut();
 				 $(".imagenApoyo").fadeIn();
 				 $(".inferior").fadeIn();
 			 } else {			 
 				 $(".superior").fadeIn();
 				 $(".medio").fadeOut();
 				 $(".medioContenido").fadeIn();
-				 $("#seleccionAticulo").fadeOut();
-				 $("#seleccionApoyo").fadeIn();
 				 $(".inferior").fadeIn();
 			 }
-			 		var zona = $("#zonaIDR").val();
-			 		console.log(seccion);
-			        $(".row").hide();
-					$(".zona"+zona+seccion).show();
-					console.log(".zona"+zona+seccion);
              
 
-             //console.log(seccionNombre,seccion, uno, dos);
+             console.log(seccionNombre,seccion, uno, dos);
      });
 	 
 	 $(".addContent").click(function() {
@@ -88,98 +51,26 @@ jQuery(document).ready(function(){
              var uno = $("#posicion").val(posicion);
              
 			 muestra('contenedor_modificaciones');
-             //console.log(uno);
+             console.log(uno);
      });
-	 
-	 $(".addContentText").click(function() {
-		 	
-            var zonaN = $("#zonaIDR").val();
-             var seccionN = $("#numeroSeccionR").val();
-			  $("#zonaContentN").val(zonaN);
-			  $("#seccionContentN").val(seccionN);
-			  
-             
-			 muestra('contenedor_texto_apoyo');
-             //console.log(uno);
-     });
-	 
-	 $(".deleteContent").click(function() {
-		 	
-             var bannerID = $(this).attr('data-rel');
-			 var posicionD = $(this).attr('id');
-             var zonaD = $("#zonaIDR").val();
-             var seccionD = $("#numeroSeccionR").val();
-			  $("#zonaContent").val(zonaD);
-			  $("#seccionContent").val(seccionD);
-			  $("#posicionContent").val(posicionD);
-			  $("#bannerIDContent").val(bannerID);
-			  muestra('contenedor_delete');
-              console.log(bannerID,zonaD, seccionD,posicionD);
-     });
-	 
-	 $(".deleteContentText").click(function() {
-		 	
-             var bannerIDT = $(this).attr('data-rel');
-			 var posicionT = $(this).attr('id');
-			 var tipo = $(this).attr('name');
-			 
-			 if(tipo == 1){
-				 $('#deleteTextForm').attr('action', '<?=base_url()?>admin/principal/deleteBannerText');
-		     } else {
-				 $('#deleteTextForm').attr('action', '<?=base_url()?>admin/principal/deleteTextApoyo'); 
-			 }
-			 
-             var zonaT = $("#zonaIDR").val();
-             var seccionT = $("#numeroSeccionR").val();
-			  $("#zonaContentT").val(zonaT);
-			  $("#seccionContentT").val(seccionT);
-			  $("#posicionContentT").val(posicionT);
-			  $("#bannerIDContentT").val(bannerIDT);
-			  muestra('contenedor_delete_text');
-              console.log(bannerID,zonaT, seccionT,posicionT);
-     });
-	 
-	  $(".updateText").click(function() {
-		 	
-             var bannerID = $(this).attr('data-rel');
-			 var posicionD = $(this).attr('id');
-             var zonaD = $("#zonaIDR").val();
-             var seccionD = $("#numeroSeccionR").val();
-			  $("#zonaContent").val(zonaD);
-			  $("#seccionContent").val(seccionD);
-			  $("#posicionContent").val(posicionD);
-			  $("#bannerIDContent").val(bannerID);
-			  muestra('contenedor_modificaciones_texto');
-              console.log(bannerID,zonaD, seccionD,posicionD);
-     });
-	 
 
      $("#genero").change(
                 function(){
-					$("#personalizado").remove();
                     var thisValue = $(this).val();
                     var nombreZona = $('#genero option:selected').html();
-                    //console.log(thisValue, nombreZona);
+                    console.log(thisValue, nombreZona);
                     $("#nombreZona").detach();
              		$('<label id="nombreZona">'+nombreZona+'</label>').appendTo('#zonaNombre');
                     $("#zonaIDR").val(thisValue);
-					numeroZona = thisValue;
-					numeroSeccion = $("#numeroSeccionR").val();
-					$(".row").hide();
-					$(".zona"+numeroZona+numeroSeccion).show();
-					console.log(".zona"+numeroZona+numeroSeccion);
     }); 
 	
-	
-	
-	
 	 $("#saveBanner").click(function() {
-              zona = $("#zonaIDR").val();
-              uno = $("#numeroSeccionR").val();
+             var zona = $("#zonaIDR").val();
+             var uno = $("#numeroSeccionR").val();
              var dos = $("#nombreSeccionR").val();
                          
 
-             //console.log(uno, dos, zona);
+             console.log(uno, dos, zona);
 			 
 			/* $.ajax({
                 url:'<?=base_url()?>admin/principal/uploadBanner',
@@ -192,11 +83,11 @@ jQuery(document).ready(function(){
     		});*/
      });  
 	 
-	$(".filtro").click(
+	$(".filtrso").click(
 	function(){
-		$("#personalizado").remove();		
 		goToSearch();		        
-	});
+	}
+	);
 
 
 	 
@@ -207,26 +98,23 @@ function goToSearch(){
 	$.ajax({
 		url     : '<?=base_url()?>admin/principal/tablasDinamicas',
 		type    : 'POST',
-		data    : $('#addBanner').serialize(),
-		success : function(data){	
-			$(".personalizado").remove();		
+		data    : 'seccionID='+1+'zonaID='+1,
+		success : function(data){
 			$('#tablasDinamicasA').html(data);
 		}                                       
-	});
+	})
 }
 </script>
 
 <body>
 
 <!-- ---------------------------------------------------- contenedor_modificaciones --------------- -->
-
 <form id="addBanner" method="post" action="<?=base_url()?>admin/principal/uploadBanner" enctype="multipart/form-data">
-
 <div class="contenedor_modificaciones" id="contenedor_modificaciones" style="display:none"> <!-- Contenedor negro imagenes-->
 <div class="cerrar_modificaciones"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_modificaciones');"/> </div>
-<input type="hidden" name="numeroSeccionR" id="numeroSeccionR" value="1" />
+<input type="hidden" name="numeroSeccionR" id="numeroSeccionR" value="" />
 <input type="hidden" name="nombreSeccionR" id="nombreSeccionR" value=""/>
-<input type="hidden" name="zonaIDR" id="zonaIDR" value="9"/>
+<input type="hidden" name="zonaIDR" id="zonaIDR" value=""/>
 <input type="hidden" name="posicion" id="posicion" value=""/>
 
 <div class="modificaciones"> 
@@ -257,49 +145,10 @@ AGREGAR IMAGEN
 
 <!-- ---------------------------------------------------- contenedor_modificaciones_texto --------------- -->
 
-<form action="<?=base_url()?>admin/principal/uploadText" method="post">
-<div class="contenedor_modificaciones" id="contenedor_texto_apoyo" style="display:none"> <!-- Contenedor negro imagenes-->
-<div class="cerrar_modificaciones"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_texto_apoyo');"/> </div>
-<input type="hidden" id="zonaContentN" name="zonaContentN" value="" />
-<input type="hidden" id="seccionContentN" name="seccionContentN" value="" />
-<input type="hidden" id="posicionContentN" name="posicionContentN" value="2" />
 
-<div class="modificaciones"> 
-<div class="titulo_modificaciones"> 
-AGREGAR TEXTO
-</div>
-<div class="contenido_intruciones">
-<p> Introduzca el texto para BC0001-0000001 </p>
-</brSS>
-<textarea cols="65" rows="7" name="textoContentN" id="textoContentN"></textarea>
-
-</div>
-<ul class="morado_reg">
-<li>
-<input type="submit" value="Guardar" />
-</li>
-</ul>
-
-
-
-</div>
-
-</div> <!-- Fin contenedor negro imagenes -->
-</form>
-<!-- ---------------------------------------------------- contenedor_modificaciones_texto --------------- -->
-
-
-
-
-<!-- ---------------------------------------------------- contenedor_modificaciones_texto --------------- -->
-
-<form action="<?=base_url()?>admin/principal/updateBannerText" method="post">
 <div class="contenedor_modificaciones" id="contenedor_modificaciones_texto" style="display:none"> <!-- Contenedor negro imagenes-->
 <div class="cerrar_modificaciones"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_modificaciones_texto');"/> </div>
-<input type="hidden" id="zonaContent" name="zonaContent" value="" />
-<input type="hidden" id="seccionContent" name="seccionContent" value="" />
-<input type="hidden" id="posicionContent" name="posicionContent" value="" />
-<input type="hidden" id="bannerIDContent" name="bannerIDContent" value="" />
+
 
 <div class="modificaciones"> 
 <div class="titulo_modificaciones"> 
@@ -308,12 +157,12 @@ AGREGAR TEXTO
 <div class="contenido_intruciones">
 <p> Introduzca el texto para BC0001-0000001 </p>
 </brSS>
-<textarea cols="65" rows="7" name="texto" id="texto"></textarea>
+<textarea cols="65" rows="7"></textarea>
 
 </div>
 <ul class="morado_reg">
 <li>
-<input type="submit" value="Guardar" />
+Guardar
 </li>
 </ul>
 
@@ -322,80 +171,8 @@ AGREGAR TEXTO
 </div>
 
 </div> <!-- Fin contenedor negro imagenes -->
-</form>
 <!-- ---------------------------------------------------- contenedor_modificaciones_texto --------------- -->
 
-
-
-<!-- ---------------------------------------------------- contenedor_delete --------------- -->
-<form action="<?=base_url()?>admin/principal/deleteContent" method="post">
-
-<div class="contenedor_modificaciones" id="contenedor_delete" style="display:none"> <!-- Contenedor negro imagenes-->
-<div class="cerrar_modificaciones"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_delete');"/> </div>
-
-
-<div class="modificaciones"> 
-<div class="titulo_modificaciones"> 
-ELIMINAR CONTENIDO</div>
-<div class="contenido_intruciones">
-<p>El contenido seleccionado será borrado </p>
-</brSS>
-
-<input type="hidden" id="zonaContent" name="zonaContent" value="" />
-<input type="hidden" id="seccionContent" name="seccionContent" value="" />
-<input type="hidden" id="posicionContent" name="posicionContent" value="" />
-<input type="hidden" id="bannerIDContent" name="bannerIDContent" value="" />
-
-</div>
-<ul class="morado_reg">
-<li>
-<input type="submit" value="Borrar" />
-</li>
-</ul>
-
-
-
-</div>
-
-</div> <!-- Fin contenedor negro imagenes -->
-</form>
-<!-- ---------------------------------------------------- contenedor_delete--------------- -->
-
-
-<!-- ---------------------------------------------------- contenedor_delete_text --------------- -->
-<form action="<?=base_url()?>admin/principal/deleteBannerText" method="post" id="deleteTextForm">
-
-<div class="contenedor_modificaciones" id="contenedor_delete_text" style="display:none"> <!-- Contenedor negro imagenes-->
-<div class="cerrar_modificaciones"> <img src="<?php echo base_url()?>images/cerrar.png" onclick="oculta('contenedor_delete_text');"/> </div>
-
-
-<div class="modificaciones"> 
-<div class="titulo_modificaciones"> 
-ELIMINAR TEXTO</div>
-<div class="contenido_intruciones">
-<p>El contenido seleccionado será borrado </p>
-</brSS>
-
-<input type="hidden" id="zonaContentT" name="zonaContentT" value="" />
-<input type="hidden" id="seccionContentT" name="seccionContentT" value="" />
-<input type="hidden" id="posicionContentT" name="posicionContentT" value="" />
-<input type="hidden" id="bannerIDContentT" name="bannerIDContentT" value="" />
-<input type="hidden" id="textoT" name="textoT" value=""/>
-
-</div>
-<ul class="morado_reg">
-<li>
-<input type="submit" value="Borrar" />
-</li>
-</ul>
-
-
-
-</div>
-
-</div> <!-- Fin contenedor negro imagenes -->
-</form>
-<!-- ---------------------------------------------------- contenedor_delete_text--------------- -->
 
 
 <!-- ---------------------------------------------------- encabezado --------------- -->
@@ -519,6 +296,7 @@ ZONA- <label id="zonaNombre"><label id="nombreZona">Seleccione la zona</label></
 
 </br>
 
+<div id="tablasDinamicasA">
 <!--       CONTENIDO SUPERIOR       -->
 <table class="tabla_carrito superior" width="990" style="display:none">
 <tr>
@@ -566,49 +344,84 @@ Banner Publicidad
 
 <td bgcolor="#E6E7E8">
 <img src="<?php echo base_url()?>images/agregar.png" class="addContent" data-rel="1"/>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContent" data-rel="0" id="1"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
 </td>
 
 </tr>
 
-<?php if($contenido != null):
-	  $contador = 0;
-	  foreach($contenido as $c):
-
-	  if($c->posicion == 1):?>
-<tr class="zona<?=$c->zonaID?><?=$c->seccionID?> row" style="display:none;">
+<tr >
 <td>
 
 </td>
 <td>
-<?=++$contador?>
+00001
 </td>
 <td>
-<input type="hidden" id="bannerID" name="bannerID" value="<?=$c->bannerID?>"/>
+
 </td>
 <td>
 Imagen
 </td>
-
-
-
-
 <td>
 
 </td>
 <td>
-<img src="<?php echo base_url()?>images/<?php echo $c->imgbaner?>" width="290" height="40" />
+<img src="<?php echo base_url()?>images/banner_superior/1.png" width="290" height="40" />
 </td>
 <td>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContent" data-rel="<?php echo $c->bannerID?>" id="1"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
 </td>
 
 </tr>
-	  <?php 
-	  endif;
-	  endforeach;
-	  endif; ?>
+<tr >
+<td>
 
+</td>
+<td>
+00002
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/2.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00003
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/3.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
 </table>
 <!--       CONTENIDO SUPERIOR       -->
 
@@ -660,25 +473,19 @@ Banner Contenido
 </td>
 <td bgcolor="#E6E7E8">
 <img src="<?php echo base_url()?>images/agregar.png" class="addContent" data-rel="2"/>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContent" data-rel="0" id="2"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
 </td>
 
 </tr>
 
-<?php if($contenido != null):
-	  $contador = 0;
-	  foreach($contenido as $c):
-
-	  if($c->posicion == 2):?>
-<tr class="zona<?=$c->zonaID?><?=$c->seccionID?> row" style="display:none;">
 <td>
 
 </td>
 <td>
-<?=++$contador?>
+00001
 </td>
 <td>
-<input type="hidden" id="bannerID" name="bannerID" value="<?=$c->bannerID?>"/>
+
 </td>
 <td>
 Imagen
@@ -687,17 +494,15 @@ Imagen
 
 </td>
 <td>
-<img src="<?php echo base_url()?>images<?php echo $c->imgbaner?>" width="122" height="74"/>
+<img src="<?php echo base_url()?>images/900x500_1.jpg" width="122" height="74"/>
 </td>
 <td>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContent" data-rel="<?php echo $c->bannerID?>" id="2"/>
-<img src="<?php echo base_url()?>images/agregar.png" class="updateText" data-rel="<?php echo $c->bannerID?>" id="2"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones_texto');"/>
 </td>
 
 </tr>
 
-<tr class="zona<?=$c->zonaID?><?=$c->seccionID?> row" style="display:none;">
-
 <td>
 
 </td>
@@ -705,26 +510,22 @@ Imagen
 
 </td>
 <td>
-<?=$n = $contador + 1;?>
+00002
 </td>
 <td>
-Texto Banner
+Texto
 </td>
 <td>
 
 </td>
-<td class="textoBanner">
-<?php echo $c->texto?>
+<td>
+En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.
 </td>
 <td>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContentText" data-rel="<?php echo $c->bannerID?>" id="2" name="1"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
 </td>
 
 </tr>
-	  <?php 
-	  endif;
-	  endforeach;
-	  endif; ?>
 
 </table>
 <!--       CONTENIDO MEDIO BANNER       -->
@@ -732,7 +533,7 @@ Texto Banner
 
 
 <!--       CONTENIDO MEDIO ARTICULO       -->
-<table class="tabla_carrito medioContenido" width="990" style="display:NONE">
+<table class="tabla_carrito medioContenido" width="990" style="display:none">
 <tr>
 <th width="84">
 Nivel 1
@@ -756,7 +557,7 @@ Contenido
 Ajustes
 </th>
 </tr>
-<tr class="" style="display:">
+<tr class="imagenApoyo" style="display:none">
 <td bgcolor="#E6E7E8" class="nivel">
 BC00002
 </td>
@@ -767,45 +568,30 @@ BC00002
 
 </td>
 <td bgcolor="#E6E7E8">
- Contenido
+Imegen Contenido
 </td>
 <td bgcolor="#E6E7E8">
-   Artículo / Texto Apoyo
+   Artículo
 </td>
 <td bgcolor="#E6E7E8">
 
 </td>
 <td bgcolor="#E6E7E8">
-<div id="seleccionAticulo" style="display:none">
 <img src="<?php echo base_url()?>images/agregar.png" class="addContent" data-rel="2"/>
-</div>
-<div id="seleccionApoyo" style="display:none">
-<img src="<?php echo base_url()?>images/agregar.png" class="addContentText" data-rel="2"/>
-</div>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContent" id="2"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
 </td>
 
 </tr>
 
-
-<?php if($contenido != null):
-	  $contador = 0;
-	  foreach($contenido as $c):
-
-	  if($c->posicion == 2):
-	  ?>
-
-<?php if($c->seccionID == 8 || $c->seccionID == 9 || $c->seccionID == 10 ):  ?>
-
-<tr class="imagenApoyo zona<?=$c->zonaID?><?=$c->seccionID?> row" style="display:none">
+<tr class="imagenApoyo" style="display:none">
 <td>
 
 </td>
 <td>
-<?=++$contador?>
+00001
 </td>
 <td>
-<input type="hidden" id="bannerID" name="bannerID" value="<?=$c->bannerID?>"/>
+
 </td>
 <td>
 Imagen
@@ -814,16 +600,14 @@ Imagen
 
 </td>
 <td>
-<img src="<?php echo base_url()?>images/<?php echo $c->imgbaner?>" width="122" height="74"/>
+<img src="<?php echo base_url()?>images/900x500_1.jpg" width="122" height="74"/>
 </td>
 <td>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContent" data-rel="<?php echo $c->bannerID?>" id="2"/>
-<img src="<?php echo base_url()?>images/agregar.png" class="updateText" data-rel="<?php echo $c->bannerID?>" id="2"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+<img src="<?php echo base_url()?>images/agregar.png" onclick="muestra('contenedor_modificaciones_texto');"/>
 </td>
 
 </tr>
-<?php endif; ?>
-<tr class="zona<?=$c->zonaID?><?=$c->seccionID?> row " style="display:none;">
 
 <td>
 
@@ -832,26 +616,22 @@ Imagen
 
 </td>
 <td>
-<?=$n = $contador + 1;?>
+00002
 </td>
 <td>
-Texto de Apoyo
+Texto
 </td>
 <td>
 
 </td>
 <td>
-<?php echo $c->texto?>
+En nuestra seccion de Cruza encuentra la pareja perfecta para tu perrito.
 </td>
 <td>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContentText" data-rel="<?php echo $c->bannerID?>" id="2" name="2"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
 </td>
 
 </tr>
-	  <?php 
-	  endif;
-	  endforeach;
-	  endif; ?>
 
 </table>
 <!--       CONTENIDO MEDIO CONTENIDO       -->
@@ -904,25 +684,20 @@ Banner Publicidad
 
 <td bgcolor="#E6E7E8">
 <img src="<?php echo base_url()?>images/agregar.png" class="addContent" data-rel="3"/>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContent" data-rel="0" id="3"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
 </td>
 
 </tr>
 
-<?php if($contenido != null):
-	  $contador = 0;
-	  foreach($contenido as $c):
-	  
-	  if($c->posicion == 3):?>
-<tr class="zona<?=$c->zonaID?><?=$c->seccionID?> row" style="display:none;">
+<tr >
 <td>
 
 </td>
 <td>
-<?=++$contador?>
+00001
 </td>
 <td>
-<input type="hidden" id="bannerID" name="bannerID" value="<?=$c->bannerID?>"/>
+
 </td>
 <td>
 Imagen
@@ -931,20 +706,65 @@ Imagen
 
 </td>
 <td>
-<img src="<?php echo base_url()?>images/<?=$c->imgbaner?>" width="290" height="40" />
+<img src="<?php echo base_url()?>images/banner_superior/1.png" width="290" height="40" />
 </td>
 <td>
-<img src="<?php echo base_url()?>images/baja_contenido.png" class="deleteContent" data-rel="<?php echo $c->bannerID?>" id="3"/>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
 </td>
 
 </tr>
-	  <?php 
-	  endif;
-	  endforeach;
-	  endif; ?>
+<tr >
+<td>
+
+</td>
+<td>
+00002
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/2.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+
+</td>
+
+</tr>
+<tr >
+<td>
+
+</td>
+<td>
+00003
+</td>
+<td>
+
+</td>
+<td>
+Imagen
+</td>
+<td>
+
+</td>
+<td>
+<img src="<?php echo base_url()?>images/banner_superior/3.png" width="290" height="40" />
+</td>
+<td>
+<img src="<?php echo base_url()?>images/baja_contenido.png"/>
+</td>
+
+</tr>
 </table>
 <!--       CONTENIDO BANNER INFERIOR       -->
-
+</div>
 </div>
 
 </body>
