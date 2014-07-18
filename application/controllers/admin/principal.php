@@ -84,6 +84,10 @@ class Principal extends CI_Controller {
 
     }
 
+    function getAdminT(){
+        $this->load->view('admin/adminT_view');
+    }
+
     function uploadBanner(){
         $posicion = $this->input->post('posicion');//$this->input->post('posicion'); // '1 - superior 2 - centro - 3 abajo - 4 lateral'
         $seccionID = $this->input->post('numeroSeccionR'); // inici, venta, perros perdidos, etc.
@@ -247,5 +251,6 @@ class Principal extends CI_Controller {
     
 
    
+
 
 }

@@ -9,6 +9,7 @@
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/administrador.css" media="screen"></link>
 <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>css/general.css" media="screen"></link>
 <script src="<?php echo base_url()?>js/funciones_.js" type="text/javascript"></script>
+
 <body>
 
 <div class="contenedor_modificaciones" id="contenedor_modificaciones" style="display:none"> <!-- Contenedor negro imagenes-->
@@ -102,54 +103,8 @@ Eliminar
 <div class="menu_admin">
 <ul class="el_menu">
 <li>
-Pantallas
-<ul>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Inicio</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Venta</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Cruza</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Directorio</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Prefil de usuario</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Adopción</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Perros Perdidos</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> La raza del mes</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Evento del mes</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Datos curiosos</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Asociaciones Protectoras</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> ¿Quiénes somos?</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Tutorial</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Publicidad</a>
-</li>
-<li>
-<a href="#"> <img src="<?php echo base_url()?>images/ciculo.png" /> Preguntas frecuentes</a>
-</li>
-</ul>
+<a href="<?php echo base_url()?>admin/principal/getAdminP" style= "color:#FFF;text-decoration:none;"> Pantallas </a>
+
 </li>
 <li>
 Usuarios

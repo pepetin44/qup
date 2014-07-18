@@ -452,6 +452,9 @@ Pantallas
 <li>
 <a href="#" id="PREGUNTAS F." name="15" class="seccion filtro"> <img src="<?php echo base_url()?>images/ciculo.png" /> Preguntas frecuentes</a>
 </li>
+<li>
+<a href="#" id="TIENDA" name="16" class="seccion filtro"> <img src="<?php echo base_url()?>images/ciculo.png" /> Tienda</a>
+</li>
 </ul>
 </li>
 <li>
@@ -482,6 +485,7 @@ Mensajes
 <li>
 Anuncios
 </li>
+<li><a href="<?php echo base_url()?>admin/principal/getAdminT" style="color:#FFF;text-decoration:none;"> Tienda</a></li>
 </ul>
 </div>
 
